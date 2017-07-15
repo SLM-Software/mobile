@@ -3,10 +3,8 @@ SpotlightmartApp.controller('homeCtrl', function ($scope, CordovaService, $locat
     $scope.currentIndex = 0;
     $scope.name = "John Doe";
     $scope.slides = [
-        { quot : 'This is card #1'},
-        { quot : 'This is card #2'},
-        { quot : 'This is card #3'},
-        { quot : 'This is card #4'}
+        { quot : '$1.00 Off Coke', img_url : '/img/Coke_20oz.png', msg : 'Buy 20oz Coke Get $1.00 Off' },
+        { quot : 'Free Cheerios', img_url : '/img/cheerios_en.png', msg : 'Buy 1 Get 1 Free' }
     ];
 
     $scope.prevSlide = function () {

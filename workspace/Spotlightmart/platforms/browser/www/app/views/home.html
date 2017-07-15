@@ -23,6 +23,19 @@
             <div ng-repeat="slide in slides" class="slide slide-animation nonDraggableImage"
                 ng-swipe-right="nextSlide()" ng-swipe-left="prevSlide()"
                 ng-hide="!isCurrentSlideIndex($index)">        
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-4">
+                            <img ng-src="{{ slide.img_url }}" />
+                        </div>
+                        <div class="col-xs-8">
+                            <h4>{{ slide.quot }}</h4>
+                            <br>
+                            {{ slide.msg }}
+                        </div>
+                        </div>
+                    </div>
+                </div>
                 <h3>{{ slide.quot }}</h3>
             </div>
     </div>
