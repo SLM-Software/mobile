@@ -35,7 +35,7 @@ angular.module('fsCordova', [])
   }]);
 
 
-var SpotlightmartApp = angular.module('SpotlightmartApp', ['fsCordova', 'ngRoute','ui.bootstrap','angular-cardflow','ngTouch']);
+var SpotlightmartApp = angular.module('SpotlightmartApp', ['fsCordova', 'ngRoute','ui.bootstrap','ngAnimate','ngTouch']);
 
 SpotlightmartApp.filter('substring', function() {
     return function(str, start, end) {

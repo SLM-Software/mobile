@@ -19,9 +19,11 @@
     </div>
     <br>
     <div class="row">
-            <cardflow model="cardflowSnapKinetic" mode="swipeSnapKinetic">
-                <div class="cardflow-card" ng-repeat="card in cards" >
-                    {{ card.title }}
-                </div>
-            </cardflow>    </div>
+        <div class="slider">
+            <div ng-repeat="slide in slides" class="slide slide-animation nonDraggableImage"
+                ng-swipe-right="nextSlide()" ng-swipe-left="prevSlide()"
+                ng-hide="!isCurrentSlideIndex($index)">        
+                <h3>{{ slide.quot }}</h3>
+            </div>
+    </div>
 </div>
