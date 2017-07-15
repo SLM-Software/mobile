@@ -1,0 +1,7 @@
+﻿<ul class="nav nav-pills nav-stacked">
+    <li ng-repeat="section in sections" class="bg-color-blue" ng-class="{active:section.selected}"
+        ng-mouseenter="mouseenter($event)" 
+        ng-mouseleave="mouseleave($event)">
+        <a href="" ng-click="showsection(sections, section)">{{section.caption}}</a>
+    </li>
+</ul>
