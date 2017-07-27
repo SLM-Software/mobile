@@ -10,3 +10,10 @@
   bottom: 0;
   margin: auto; /* presto! */
 }
+.nonDraggableImage{
+    -webkit-user-drag: none;
+}
+.active
+{
+    color: black;
+}

@@ -59,9 +59,13 @@ SpotlightmartApp.config(function ($routeProvider, $locationProvider) {
             templateUrl: 'app/views/home.html',
             controller: 'homeCtrl'
         })
-    .otherwise({
-        redirectTo: '/Home/'
-    });
+        .when('/Settings/', {
+            templateUrl: 'app/views/settings.html',
+            controller: 'settingsCtrl'
+        })
+        .otherwise({
+            redirectTo: '/Home/'
+        });
 });
 
 SpotlightmartApp.controller('indexCtrl', function ($scope, CordovaService, $location, $rootScope) {
