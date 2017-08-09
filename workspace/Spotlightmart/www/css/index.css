@@ -17,3 +17,6 @@
 {
     color: black;
 }
+a.disabled {
+    pointer-events: none;
+}

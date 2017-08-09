@@ -40,11 +40,11 @@
             <div ng-view></div>   
             <div id="footer">
               <div class="col-xs-12 navbar navbar-fixed-bottom bg-success">
-                <div class="row row-eq-height" id="bottomNav">
-                    <div class="col-xs-3 text-center"><a href="/index.html/#/Home" class="active"><i class="fa fa-home fa-3x"></i><br>Home</a></div>
-                    <div class="col-xs-3 text-center"><a href="#"><i class="fa fa-search fa-3x"></i><br>Search</a></div>
-                    <div class="col-xs-3 text-center"><a href="#"><i class="fa fa-shopping-cart fa-3x"></i><br>Cart</a></div>
-                    <div class="col-xs-3 text-center"><a href="#"><i class="fa fa-cog fa-3x"></i><br>Settings</a></div>
+                <div class="row row-eq-height" id="bottomNav" ng-controller="tabbarCtrl">
+                    <div class="col-xs-3 text-center"><a ng-click="changeTab('Home')" ng-class="{ 'active disabled' : selectedTab == 'Home' }" href><i class="fa fa-home fa-3x"></i><br>Home</a></div>
+                    <div  class="col-xs-3 text-center"><a ng-click="changeTab('Search')" ng-class="{ 'active disabled' : selectedTab == 'Search' }" href><i class="fa fa-search fa-3x"></i><br>Search</a></div>
+                    <div  class="col-xs-3 text-center"><a ng-click="changeTab('Cart')" ng-class="{ 'active disabled' : selectedTab == 'Cart' }" href><i class="fa fa-shopping-cart fa-3x"></i><br>Cart</a></div>
+                    <div  class="col-xs-3 text-center"><a ng-click="changeTab('Settings')" ng-class="{ 'active disabled' : selectedTab == 'Settings' }" href><i class="fa fa-cog fa-3x"></i><br>Settings</a></div>
                 </div>
               </div>
             </div>
@@ -55,6 +55,7 @@
         <script type="text/javascript" src="js/vendor/angular-route.js"></script>
         <script type="text/javascript" src="js/vendor/angular-touch.js"></script>
         <script type="text/javascript" src="js/vendor/angular-animate.js"></script>
+        <script type="text/javascript" src="js/vendor/ngStorage.js"></script>
         <script type="text/javascript" src="js/vendor/ui-bootstrap.min.js"></script>
         <script type="text/javascript" src="js/vendor/ui-bootstrap-tpls.min.js"></script>
         <script type="text/javascript" src="js/vendor/bootstrap.min.js"></script>
@@ -67,6 +68,7 @@
         <!-- Controllers -->    
         <script src="app/controllers/homeCtrl.js"></script>
         <script src="app/controllers/settingsCtrl.js"></script>
+        <script src="app/controllers/tabbarCtrl.js"></script>
         <!-- Services -->
         <script type="text/javascript">
             app.initialize();
