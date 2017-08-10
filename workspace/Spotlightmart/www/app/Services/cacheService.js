@@ -1,4 +1,4 @@
-CT6App.factory('CacheService', function($cacheFactory) {
+SpotlightmartApp.factory('CacheService', function($cacheFactory) {
     var cache=null;
     return {
         get: function(key) {

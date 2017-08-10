@@ -40,4 +40,4 @@ SpotlightmartApp.controller('tabbarCtrl', function ($scope, CordovaService, $loc
             }
         }
     });
-}
+});
