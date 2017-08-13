@@ -49,6 +49,7 @@
               </div>
             </div>
         </div>
+        <!-- include -->
         <script src="js/vendor/jquery.min.js"></script>
         <script src="js/vendor/jquery.min.map"></script>
         <script type="text/javascript" src="js/vendor/angular.js"></script>
@@ -62,15 +63,25 @@
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
 
+        <!-- Libraries -->
+        <script type="text/javascript" src="js/vendor/lokijs.js"></script>
+        <script type="text/javascript" src="js/vendor/loki-angular.js"></script>
+        <script type="text/javascript" src="js/vendor/loki-cordova-fs-adapter.js"></script>
+        
+        <!-- AngularJS include -->
         <script type="text/javascript" src="app/app.js"></script>
         <script type="text/javascript" src="js/vendor/cardflow.js"></script>
         <!-- Directives -->  
+        
         <!-- Controllers -->    
         <script src="app/controllers/homeCtrl.js"></script>
         <script src="app/controllers/settingsCtrl.js"></script>
         <script src="app/controllers/tabbarCtrl.js"></script>
+        <script src="app/controllers/mdlLoginCtrl.js"></script>
+        
         <!-- Services -->
-        <script src="app/Services/cacheService.js"></script>
+        <script src="app/Services/userService.js"></script>
+        
         <!-- Angularjs App -->
         <script type="text/javascript">
             app.initialize();

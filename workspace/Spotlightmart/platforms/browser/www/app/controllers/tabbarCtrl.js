@@ -16,7 +16,7 @@ SpotlightmartApp.controller('tabbarCtrl', function ($scope, CordovaService, $loc
                 $scope.selectedTab = "Cart";
             else if ($window.location.href.indexOf("Settings") > -1)
                 $scope.selectedTab = "Settings";
-
+            
             console.log("Current selected tab : " + $scope.selectedTab);
         }
 
