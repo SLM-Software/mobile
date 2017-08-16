@@ -1,4 +1,4 @@
-SpotlightmartApp.controller('homeCtrl', function ($scope, CordovaService, $location, $rootScope, $uibModal, UserService) {
+SpotlightmartApp.controller('homeCtrl', function ($scope, CordovaService, $location, $rootScope, $uibModal) {
     CordovaService.ready.then(function () {
         // generate 40 cards
         $scope.currentIndex = 0;

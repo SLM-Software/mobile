@@ -1,0 +1,30 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-file": {
+            "PACKAGE_NAME": "com.spotlight"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.spotlight"
+        },
+        "phonegap-facebook-plugin": {
+            "APP_ID": "1915895988671514",
+            "APP_NAME": "Spotlightmart",
+            "PACKAGE_NAME": "com.spotlight"
+        }
+    },
+    "dependent_plugins": {
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "com.spotlight"
+        },
+        "cordova-plugin-inappbrowser": {
+            "PACKAGE_NAME": "com.spotlight"
+        }
+    }
+}
