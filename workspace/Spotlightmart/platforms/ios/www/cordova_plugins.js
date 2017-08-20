@@ -183,9 +183,9 @@ module.exports = [
         ]
     },
     {
-        "id": "phonegap-facebook-plugin.FacebookConnectPlugin",
-        "file": "plugins/phonegap-facebook-plugin/facebookConnectPlugin.js",
-        "pluginId": "phonegap-facebook-plugin",
+        "id": "cordova-plugin-facebook4.FacebookConnectPlugin",
+        "file": "plugins/cordova-plugin-facebook4/www/facebook-native.js",
+        "pluginId": "cordova-plugin-facebook4",
         "clobbers": [
             "facebookConnectPlugin"
         ]
@@ -198,7 +198,7 @@ module.exports.metadata =
     "cordova-plugin-file": "4.3.3",
     "cordova-plugin-inappbrowser": "1.7.1",
     "cordova-plugin-whitelist": "1.3.2",
-    "phonegap-facebook-plugin": "0.12.0"
+    "cordova-plugin-facebook4": "1.9.1"
 };
 // BOTTOM OF METADATA
 });

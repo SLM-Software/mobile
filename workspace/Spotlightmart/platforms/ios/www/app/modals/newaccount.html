@@ -8,7 +8,7 @@
     <!-- First Name -->
     <div class="form-group">
         <label>First Name</label>
-        <input type="text" name="username" class="form-control" ng-model="username" ng-minlength="3" ng-maxlength="50" required>
+        <input type="text" name="fistname" class="form-control" ng-model="firstname" ng-minlength="3" ng-maxlength="50" required>
         <p ng-show="form.userForm.username.$error.minlength" class="help-block">Username is too short.</p>
         <p ng-show="form.userForm.username.$error.maxlength" class="help-block">Username is too long.</p>
     </div>
@@ -16,7 +16,7 @@
     <!-- Last Name -->
     <div class="form-group">
         <label>Last Name</label>
-        <input type="text" name="username" class="form-control" ng-model="username" ng-minlength="3" ng-maxlength="50" required>
+        <input type="text" name="lastname" class="form-control" ng-model="lastname" ng-minlength="3" ng-maxlength="50" required>
         <p ng-show="form.userForm.username.$error.minlength" class="help-block">Username is too short.</p>
         <p ng-show="form.userForm.username.$error.maxlength" class="help-block">Username is too long.</p>
     </div>
@@ -24,7 +24,7 @@
     <!-- Phone -->
     <div class="form-group">
         <label>Phone Number</label>
-        <input type="text" name="username" class="form-control" ng-model="username" ng-minlength="3" ng-maxlength="50" required>
+        <input type="text" name="phone" class="form-control" ng-model="phone" ng-minlength="3" ng-maxlength="50" required>
         <p ng-show="form.userForm.username.$error.minlength" class="help-block">Username is too short.</p>
         <p ng-show="form.userForm.username.$error.maxlength" class="help-block">Username is too long.</p>
     </div>
@@ -32,14 +32,28 @@
     <!-- Gender -->
     <div class="form-group">
         <label>Gender</label>
-        <input type="checkbox" checked data-toggle="toggle" data-on="Male" data-off="Female" data-onstyle="success" data-offstyle="danger">
+        <div class="btn-group pull-right" data-toggle="buttons">
+            <label class="btn btn-default">
+                <input type="radio" name="gender" value="male" ng-model="gender"/> Male
+            </label>
+            <label class="btn btn-default">
+                <input type="radio" name="gender" value="female" ng-mdoel="gender"/> Female
+            </label>        
+        </div>
         <p ng-show="form.userForm.username.$error.minlength" class="help-block">Username is too short.</p>
         <p ng-show="form.userForm.username.$error.maxlength" class="help-block">Username is too long.</p>
     </div>
-    <!-- SUBMIT -->
-    <button class="btn btn-primary btn-block" ng-click="login()" ng-disabled="form.userForm.$invalid">OK</button>
+    
+    <!-- Email -->
+    <div class="form-group">
+        <label>Email</label>
+        <input type="text" name="email" class="form-control" ng-model="email" ng-minlength="3" ng-maxlength="50" required>
+        <p ng-show="form.userForm.username.$error.minlength" class="help-block">Username is too short.</p>
+        <p ng-show="form.userForm.username.$error.maxlength" class="help-block">Username is too long.</p>
+    </div>
     
 </div>
 <div class="modal-footer">
-    <p>Not a member? <a href="">Create an account</a></p>
+    <!-- SUBMIT -->
+    <button class="btn btn-primary btn-block" ng-click="login()" ng-disabled="form.userForm.$invalid">OK</button>
 </div>

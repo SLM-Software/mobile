@@ -13,13 +13,13 @@ SpotlightmartApp.controller('mdlLoginCtrl', function ($scope, CordovaService, $m
         }
         
         $scope.facebookLogin = function() {
-            facebookConnectPlugin.browserInit("1915895988671514");
-            facebookConnectPlugin.login(["public_profile"], 
+            //facebookConnectPlugin.browserInit("1915895988671514");
+            facebookConnectPlugin.login(FB_APP_PERMISSION, 
                 function (result) {
                     console.log("FB Result : %o", result);
                 },
                 function (error) {
-                    alert(error);
+                    console.log("Error : %o", error);
                 }
             );
         }
