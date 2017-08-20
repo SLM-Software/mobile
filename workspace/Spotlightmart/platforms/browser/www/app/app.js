@@ -63,6 +63,10 @@ SpotlightmartApp.config(function ($routeProvider, $locationProvider) {
             templateUrl: 'app/views/settings.html',
             controller: 'settingsCtrl'
         })
+        .when('/Personal/', {
+            templateUrl: 'app/views/personal.html',
+            controller: 'personalCtrl'
+        })
         .otherwise({
             redirectTo: '/Home/'
         });
