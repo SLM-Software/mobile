@@ -1,4 +1,4 @@
-SpotlightmartApp.controller('homeCtrl', function ($scope, CordovaService, $location, $rootScope, $uibModal) {
+SpotlightmartApp.controller('homeCtrl', function ($scope, CordovaService, $location, $rootScope) {
     CordovaService.ready.then(function () {
         // generate 40 cards
         $scope.currentIndex = 0;
@@ -11,25 +11,6 @@ SpotlightmartApp.controller('homeCtrl', function ($scope, CordovaService, $locat
         init();
         
         function init() {
-            //UserService.initDB();
-            //UserService.getUser()
-                //.then(function(user) {
-                //if (user != null)
-                //    $scope.user = user;
-                //else
-                //{
-                var mdlLogin = $uibModal.open({
-                    animation: true,
-                    templateUrl: 'app/modals/login.html',
-                    controller: 'mdlLoginCtrl',
-                    backdrop: 'static'
-                });
-            
-                mdlLogin.result.then(function(user) {
-                });
-
-                //}
-            //});
         }
         
         $scope.prevSlide = function () {

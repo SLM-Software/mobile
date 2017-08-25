@@ -5,24 +5,18 @@
 	};
 	objectVersion = 46;
 	objects = {
-
 /* Begin PBXBuildFile section */
 		0207DA581B56EA530066E2B4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0207DA571B56EA530066E2B4 /* Images.xcassets */; };
 		12A4A2CB3F8542AF863A8621 /* CDVLocalFilesystem.m in Sources */ = {isa = PBXBuildFile; fileRef = A97897A3E2264AAD876A049F /* CDVLocalFilesystem.m */; };
-		1637BE3EC23E40108B81E0A0 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1294800CF044B03A640F194 /* FBSDKCoreKit.framework */; };
 		1D3623260D0F684500981E51 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* AppDelegate.m */; };
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
-		23CEEADD8ABF4D25A41F18B1 /* FacebookConnectPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA89C0A704347C0A2752DF2 /* FacebookConnectPlugin.m */; };
 		301BF552109A68D80062928A /* libCordova.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 301BF535109A57CC0062928A /* libCordova.a */; };
 		302D95F114D2391D003F00A1 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 302D95EF14D2391D003F00A1 /* MainViewController.m */; };
 		302D95F214D2391D003F00A1 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 302D95F014D2391D003F00A1 /* MainViewController.xib */; };
-		46CA1650453446E399F2F3DB /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A667481CF974FAD9E388F7C /* Bolts.framework */; };
-		59101086FAD34BE4A9E0517F /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E4E58A26D8049E9BD9317A1 /* FBSDKShareKit.framework */; };
 		6AFF5BF91D6E424B00AB3073 /* CDVLaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AFF5BF81D6E424B00AB3073 /* CDVLaunchScreen.storyboard */; };
 		8DE858BDF4CF4A9E801B06E7 /* CDVAssetLibraryFilesystem.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E113DC1D494B60B3EFB8AA /* CDVAssetLibraryFilesystem.m */; };
-		9CE98260A55641A286EE9355 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 410605E93252467CA4BB8BCC /* FBSDKLoginKit.framework */; };
 		A08A150ADA7940EDAF8F67BB /* CDVFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 56B83C40318241C3B3EF32C9 /* CDVFile.m */; };
-		F1D534BC63C049DE9899A2A3 /* CDVInAppBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = 066E210E428F48BDABAECF6D /* CDVInAppBrowser.m */; };
+		23B1432AB16049D78367CA38 /* CDVInAppBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BFBAF9975DB4CDBB9B022B5 /* CDVInAppBrowser.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,12 +46,10 @@
 /* Begin PBXFileReference section */
 		0207DA571B56EA530066E2B4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Spotlightmart/Images.xcassets; sourceTree = SOURCE_ROOT; };
 		0483EDB49AC24EA5A40906D5 /* CDVAssetLibraryFilesystem.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = CDVAssetLibraryFilesystem.h; path = "cordova-plugin-file/CDVAssetLibraryFilesystem.h"; sourceTree = "<group>"; };
-		066E210E428F48BDABAECF6D /* CDVInAppBrowser.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = CDVInAppBrowser.m; path = "cordova-plugin-inappbrowser/CDVInAppBrowser.m"; sourceTree = "<group>"; };
 		1D3623240D0F684500981E51 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1D3623250D0F684500981E51 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		1D6058910D05DD3D006BFB54 /* Spotlightmart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Spotlightmart.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		2CA89C0A704347C0A2752DF2 /* FacebookConnectPlugin.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = FacebookConnectPlugin.m; path = "cordova-plugin-facebook4/FacebookConnectPlugin.m"; sourceTree = "<group>"; };
 		301BF52D109A57CC0062928A /* CordovaLib/CordovaLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = CordovaLib/CordovaLib.xcodeproj; sourceTree = "<group>"; };
 		301BF56E109A69640062928A /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; path = www; sourceTree = SOURCE_ROOT; };
 		302D95EE14D2391D003F00A1 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
@@ -68,22 +60,18 @@
 		3047A5111AB8059700498E2A /* build.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = build.xcconfig; path = cordova/build.xcconfig; sourceTree = SOURCE_ROOT; };
 		32CA4F630368D1EE00C91783 /* Spotlightmart-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Spotlightmart-Prefix.pch"; sourceTree = "<group>"; };
 		3FAD0C1DE2CB48FA80A6D097 /* CDVFile.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = CDVFile.h; path = "cordova-plugin-file/CDVFile.h"; sourceTree = "<group>"; };
-		410605E93252467CA4BB8BCC /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = "Spotlightmart/Plugins/cordova-plugin-facebook4/FBSDKLoginKit.framework"; sourceTree = "<group>"; };
 		56B83C40318241C3B3EF32C9 /* CDVFile.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = CDVFile.m; path = "cordova-plugin-file/CDVFile.m"; sourceTree = "<group>"; };
-		5A667481CF974FAD9E388F7C /* Bolts.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = "Spotlightmart/Plugins/cordova-plugin-facebook4/Bolts.framework"; sourceTree = "<group>"; };
 		6AFF5BF81D6E424B00AB3073 /* CDVLaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = CDVLaunchScreen.storyboard; path = Spotlightmart/CDVLaunchScreen.storyboard; sourceTree = SOURCE_ROOT; };
-		7E4E58A26D8049E9BD9317A1 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = "Spotlightmart/Plugins/cordova-plugin-facebook4/FBSDKShareKit.framework"; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Spotlightmart-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Spotlightmart-Info.plist"; path = "Spotlightmart/Spotlightmart-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = SOURCE_ROOT; };
-		8FFAAEC6FD424D60BB4FA59B /* CDVInAppBrowser.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = CDVInAppBrowser.h; path = "cordova-plugin-inappbrowser/CDVInAppBrowser.h"; sourceTree = "<group>"; };
 		A97897A3E2264AAD876A049F /* CDVLocalFilesystem.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = CDVLocalFilesystem.m; path = "cordova-plugin-file/CDVLocalFilesystem.m"; sourceTree = "<group>"; };
-		D1294800CF044B03A640F194 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = "Spotlightmart/Plugins/cordova-plugin-facebook4/FBSDKCoreKit.framework"; sourceTree = "<group>"; };
-		D412E1A5D11B4958B0AB4619 /* FacebookConnectPlugin.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = FacebookConnectPlugin.h; path = "cordova-plugin-facebook4/FacebookConnectPlugin.h"; sourceTree = "<group>"; };
 		EB87FDF31871DA8E0020F90C /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; name = www; path = ../../www; sourceTree = "<group>"; };
 		EB87FDF41871DAF40020F90C /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = ../../config.xml; sourceTree = "<group>"; };
 		ED33DF2A687741AEAF9F8254 /* Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		EEF64D61896A42D4813B2D67 /* CDVLocalFilesystem.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = CDVLocalFilesystem.h; path = "cordova-plugin-file/CDVLocalFilesystem.h"; sourceTree = "<group>"; };
 		F6E113DC1D494B60B3EFB8AA /* CDVAssetLibraryFilesystem.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = CDVAssetLibraryFilesystem.m; path = "cordova-plugin-file/CDVAssetLibraryFilesystem.m"; sourceTree = "<group>"; };
 		F840E1F0165FE0F500CFE078 /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = Spotlightmart/config.xml; sourceTree = "<group>"; };
+		1BFBAF9975DB4CDBB9B022B5 /* CDVInAppBrowser.m */ = {isa = PBXFileReference; name = "CDVInAppBrowser.m"; path = "cordova-plugin-inappbrowser/CDVInAppBrowser.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		9E7D38DA541E4B1D962BC200 /* CDVInAppBrowser.h */ = {isa = PBXFileReference; name = "CDVInAppBrowser.h"; path = "cordova-plugin-inappbrowser/CDVInAppBrowser.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,10 +80,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				301BF552109A68D80062928A /* libCordova.a in Frameworks */,
-				46CA1650453446E399F2F3DB /* Bolts.framework in Frameworks */,
-				1637BE3EC23E40108B81E0A0 /* FBSDKCoreKit.framework in Frameworks */,
-				9CE98260A55641A286EE9355 /* FBSDKLoginKit.framework in Frameworks */,
-				59101086FAD34BE4A9E0517F /* FBSDKShareKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -166,10 +150,6 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				5A667481CF974FAD9E388F7C /* Bolts.framework */,
-				D1294800CF044B03A640F194 /* FBSDKCoreKit.framework */,
-				410605E93252467CA4BB8BCC /* FBSDKLoginKit.framework */,
-				7E4E58A26D8049E9BD9317A1 /* FBSDKShareKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -202,10 +182,8 @@
 				3FAD0C1DE2CB48FA80A6D097 /* CDVFile.h */,
 				EEF64D61896A42D4813B2D67 /* CDVLocalFilesystem.h */,
 				0483EDB49AC24EA5A40906D5 /* CDVAssetLibraryFilesystem.h */,
-				066E210E428F48BDABAECF6D /* CDVInAppBrowser.m */,
-				8FFAAEC6FD424D60BB4FA59B /* CDVInAppBrowser.h */,
-				2CA89C0A704347C0A2752DF2 /* FacebookConnectPlugin.m */,
-				D412E1A5D11B4958B0AB4619 /* FacebookConnectPlugin.h */,
+				1BFBAF9975DB4CDBB9B022B5 /* CDVInAppBrowser.m */,
+				9E7D38DA541E4B1D962BC200 /* CDVInAppBrowser.h */,
 			);
 			name = Plugins;
 			path = Spotlightmart/Plugins;
@@ -336,8 +314,7 @@
 				A08A150ADA7940EDAF8F67BB /* CDVFile.m in Sources */,
 				12A4A2CB3F8542AF863A8621 /* CDVLocalFilesystem.m in Sources */,
 				8DE858BDF4CF4A9E801B06E7 /* CDVAssetLibraryFilesystem.m in Sources */,
-				F1D534BC63C049DE9899A2A3 /* CDVInAppBrowser.m in Sources */,
-				23CEEADD8ABF4D25A41F18B1 /* FacebookConnectPlugin.m in Sources */,
+				23B1432AB16049D78367CA38 /* CDVInAppBrowser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

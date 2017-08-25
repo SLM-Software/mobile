@@ -35,7 +35,7 @@ angular.module('fsCordova', [])
   }]);
 
 
-var SpotlightmartApp = angular.module('SpotlightmartApp', ['fsCordova', 'ngRoute','ui.bootstrap','ngAnimate','ngTouch', 'ngStorage','lokijs']);
+var SpotlightmartApp = angular.module('SpotlightmartApp', ['fsCordova', 'ngRoute','ui.bootstrap','ngAnimate','ngTouch', 'ngStorage','ngOpenFB']);
 
 SpotlightmartApp.filter('substring', function() {
     return function(str, start, end) {
@@ -72,5 +72,18 @@ SpotlightmartApp.config(function ($routeProvider, $locationProvider) {
         });
 });
 
-SpotlightmartApp.controller('indexCtrl', function ($scope, CordovaService, $location, $rootScope) {
+SpotlightmartApp.controller('indexCtrl', function ($scope, CordovaService, $location, $rootScope, $uibModal) {
+    CordovaService.ready.then(function () {
+        $scope.Login = function () {
+            var mdlLogin = $uibModal.open({
+                                animation: true,
+                                templateUrl: 'app/modals/login.html',
+                                controller: 'mdlLoginCtrl',
+                                backdrop: 'static'
+                            });
+            
+            mdlLogin.result.then(function(user) {
+            });
+        };
+    });
 });
