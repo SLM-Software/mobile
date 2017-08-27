@@ -25,7 +25,8 @@ SpotlightmartApp.controller('tabbarCtrl', function ($scope, CordovaService, $loc
         {
             if (tabname == 'Home')
             {
-                location.href="/index.html#/Home";                
+                $location.path("/Home");
+                $scope.selectedTab = 'Home';
             }
             else if (tabname == 'Cart')
             {
