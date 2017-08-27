@@ -1,10 +1,8 @@
-SpotlightmartApp.controller('mdlLoginCtrl', function ($scope, CordovaService, $modalInstance, $uibModal, ngFB) {
+SpotlightmartApp.controller('mdlLoginCtrl', function ($scope, CordovaService, $modalInstance, $uibModal) {
     CordovaService.ready.then(function () {
         $scope.username;
         $scope.password;
         
-        console.log("Initing FB with " + FB_APP_ID);
-        ngFB.init({appId: '1915895988671514'});
         init();
         
         function init() {
@@ -16,14 +14,22 @@ SpotlightmartApp.controller('mdlLoginCtrl', function ($scope, CordovaService, $m
         
         $scope.facebookLogin = function() {
             console.log("Logging in to FB...");
-            ngFB.login({scope: 'email,read_stream,publish_actions'})
-                .then(
+            //$cordovaOauth.facebook(FB_APP_ID, FB_APP_PERMISSION, {redirect_uri : //"http://localhost:8000/callback"}).then(
+            //    function(result){
+            //        alert('Facebook login succeeded, got access token: ' + //result.authresponse.accessToken);    
+            //    },
+            //    function(error){
+            //        alert('Facebook login failed: ' + error);
+            //    }
+            //);
+            facebookConnectPlugin.login(FB_APP_PERMISSION,
                     function(response) {
                         alert('Facebook login succeeded, got access token: ' + response.authResponse.accessToken);
                     },
                     function(error) {
-                        alert('Facebook login failed: ' + error);
-                    });
+                        //alert('Facebook login failed: ' + error);
+                    }
+            );
         }
         
         $scope.CreateAccount = function() {

@@ -5,8 +5,8 @@ SpotlightmartApp.controller('homeCtrl', function ($scope, CordovaService, $locat
         $scope.user;
         $scope.name = "John Doe";
         $scope.slides = [
-            { quot : '$1.00 Off Coke', img_url : '/img/Coke_20oz.png', msg : 'Buy 20oz Coke Get $1.00 Off' },
-            { quot : 'Free Cheerios', img_url : '/img/cheerios_en.png', msg : 'Buy 1 Get 1 Free' }
+            { quot : '$1.00 Off Coke', img_url : 'img/Coke_20oz.png', msg : 'Buy 20oz Coke Get $1.00 Off' },
+            { quot : 'Free Cheerios', img_url : 'img/cheerios_en.png', msg : 'Buy 1 Get 1 Free' }
         ];
         init();
         

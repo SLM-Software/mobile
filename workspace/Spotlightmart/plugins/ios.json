@@ -7,6 +7,11 @@
         "files": {}
     },
     "installed_plugins": {
+        "cordova-plugin-facebook4": {
+            "APP_ID": "1915895988671514",
+            "APP_NAME": "Spotlightmart",
+            "PACKAGE_NAME": "com.spotlight"
+        },
         "cordova-plugin-file": {
             "PACKAGE_NAME": "com.spotlight"
         },
@@ -14,6 +19,9 @@
             "PACKAGE_NAME": "com.spotlight"
         },
         "cordova-plugin-inappbrowser": {
+            "PACKAGE_NAME": "$(PRODUCT_BUNDLE_IDENTIFIER)"
+        },
+        "cordova-plugin-console": {
             "PACKAGE_NAME": "com.spotlight"
         }
     },
