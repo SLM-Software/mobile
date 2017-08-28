@@ -34,6 +34,8 @@
     <body>
         <div ng-app="SpotlightmartApp" class="app">
             <div class="container navbar navbar-static-top"  ng-controller="indexCtrl">
+                <div class="row bg-warning" style="height: 20px">
+                </div>
                 <div class="row row-eq-height align-items-center bg-warning" >
                     <div class="col-xs-3"></div>
                     <div class="col-xs-6 text-center"><img src="img/50x50_spotlightmart.png"/></div>
@@ -44,10 +46,10 @@
             <div id="footer">
               <div class="col-xs-12 navbar navbar-fixed-bottom bg-success">
                 <div class="row row-eq-height" id="bottomNav" ng-controller="tabbarCtrl">
-                    <div class="col-xs-3 text-center"><a ng-click="changeTab('Home')" ng-class="{ 'active disabled' : selectedTab == 'Home' }" href><i class="fa fa-home fa-3x"></i><br>Home</a></div>
+                    <div class="col-xs-3 text-center"><a ng-click="changeTab('Home')" ng-class="isActive('Home')" href><i class="fa fa-home fa-3x"></i><br>Home</a></div>
                     <div  class="col-xs-3 text-center"><a ng-click="changeTab('Search')" ng-class="{ 'active disabled' : selectedTab == 'Search' }" href><i class="fa fa-search fa-3x"></i><br>Search</a></div>
                     <div  class="col-xs-3 text-center"><a ng-click="changeTab('Cart')" ng-class="{ 'active disabled' : selectedTab == 'Cart' }" href><i class="fa fa-shopping-cart fa-3x"></i><br>Cart</a></div>
-                    <div  class="col-xs-3 text-center"><a ng-click="changeTab('Settings')" ng-class="{ 'active disabled' : selectedTab == 'Settings' }" href><i class="fa fa-cog fa-3x"></i><br>Settings</a></div>
+                    <div  class="col-xs-3 text-center"><a ng-click="changeTab('Settings')" ng-class="isActive('Settings')" href><i class="fa fa-cog fa-3x"></i><br>Settings</a></div>
                 </div>
               </div>
             </div>

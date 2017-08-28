@@ -98,7 +98,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		ZzFyczXNcGdWDLHuwRb39XpOyqc=
+		n3EMQhxZ3OwTAUK5qDHOm82eHmE=
 		</data>
 		<key>LaunchImage-568h@2x.png</key>
 		<data>
@@ -194,11 +194,11 @@
 		</data>
 		<key>www/app/controllers/settingsCtrl.js</key>
 		<data>
-		g6/9Deb8eyHNdK8+iXCzICm7M3E=
+		08NkszqKJl235pIB3sfURGB+pl0=
 		</data>
 		<key>www/app/controllers/tabbarCtrl.js</key>
 		<data>
-		mt7Gmc6tMy06l2hD49azR1vYo+o=
+		iXIBFfdOB6cldfhau4v6+n1ubAI=
 		</data>
 		<key>www/app/modals/login.html</key>
 		<data>
@@ -238,7 +238,7 @@
 		</data>
 		<key>www/app/views/home.html</key>
 		<data>
-		ht0/kL3JQT6YXMPuDS5WqXf6awE=
+		PIQJ7C7FYU8rhje9lbb9U+5Us4k=
 		</data>
 		<key>www/app/views/modalLastWeek.html</key>
 		<data>
@@ -422,7 +422,7 @@
 		</data>
 		<key>www/index.html</key>
 		<data>
-		FAFTbsYy+7kfq6vFEroi/EtY8GE=
+		Uf07QTCJGk7IsRzGxozvui/MxM8=
 		</data>
 		<key>www/js/constant.js</key>
 		<data>
@@ -1210,22 +1210,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			g6/9Deb8eyHNdK8+iXCzICm7M3E=
+			08NkszqKJl235pIB3sfURGB+pl0=
 			</data>
 			<key>hash2</key>
 			<data>
-			8wvHowKbI4RoKqzzSNXzfFbZavK7d7IY9W48hPqtOCc=
+			8rP9tM9fDsTC7BibmaL0NGLMBmGf12MtNkJZCMdV6+Y=
 			</data>
 		</dict>
 		<key>www/app/controllers/tabbarCtrl.js</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			mt7Gmc6tMy06l2hD49azR1vYo+o=
+			iXIBFfdOB6cldfhau4v6+n1ubAI=
 			</data>
 			<key>hash2</key>
 			<data>
-			dOOnP7KAHmNRlZdEG9X6hpFWDwa1VkzOm03I8NFRlsc=
+			XQ32iyfHL2EjCYqg2YNv/xGDK2aiwohb0hh4A5pYb3w=
 			</data>
 		</dict>
 		<key>www/app/modals/login.html</key>
@@ -1331,11 +1331,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			ht0/kL3JQT6YXMPuDS5WqXf6awE=
+			PIQJ7C7FYU8rhje9lbb9U+5Us4k=
 			</data>
 			<key>hash2</key>
 			<data>
-			eaQIHFUKbJpyFaKufvr9PEHYYrmLaL6qJEJYK0RGGyM=
+			ItKI8I7YWCv5T4UFVaEJ1gsf7QzO5OwSvaN52eNdljk=
 			</data>
 		</dict>
 		<key>www/app/views/modalLastWeek.html</key>
@@ -1837,11 +1837,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			FAFTbsYy+7kfq6vFEroi/EtY8GE=
+			Uf07QTCJGk7IsRzGxozvui/MxM8=
 			</data>
 			<key>hash2</key>
 			<data>
-			9TgquKiHZujF4OB8dC+nCE5ZrIxa8sX/AR8fk/jEEBU=
+			OfO2GW4Cx8qnpzhQrK+C/3unjbLVB5cDAwZDAMVdh5s=
 			</data>
 		</dict>
 		<key>www/js/constant.js</key>
