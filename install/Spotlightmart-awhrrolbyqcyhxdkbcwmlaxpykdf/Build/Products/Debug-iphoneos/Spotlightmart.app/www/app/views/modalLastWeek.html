@@ -1,0 +1,34 @@
+<!-- Content -->
+<div class="container">
+    <div class="modal-header">Week 6</div>
+    <div class="modal-body">
+        <div class="row">
+            <div class="col-xs-12">
+                <button class="btn btn-primary btn-block" ng-click="OptionClicked(1)">Skip Week 6, restart with the 1RM as below</button>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-xs-12">
+                <button class="btn btn-primary btn-block" ng-click="OptionClicked(2)">Use 1RM as below, deload</button>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-xs-12">
+                <button class="btn btn-primary btn-block" ng-click="OptionClicked(3)">Use week 6 to find your new 1RM, deload</button>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-xs-12">
+            <table class="table table-striped">
+                <tr><th></th><th>Old 1RM</th><th>New 1RM</th></tr>
+                <tr><td>Bench Press</td><td>{{ oConfig.Bench1RM }}</td><td>{{ oConfig.PrevBench1RM }}</td></tr>
+                <tr><td>Squat</td><td>{{ oConfig.Squat1RM }}</td><td>{{ oConfig.PrevSquat1RM }}</td></tr>
+                <tr><td>Deadlift</td><td>{{ oConfig.Deadlift1RM }}</td><td>{{ oConfig.PrevDeadlift1RM }}</td></tr>
+            </table>
+            </div>
+        </div>
+    </div>
+</div>

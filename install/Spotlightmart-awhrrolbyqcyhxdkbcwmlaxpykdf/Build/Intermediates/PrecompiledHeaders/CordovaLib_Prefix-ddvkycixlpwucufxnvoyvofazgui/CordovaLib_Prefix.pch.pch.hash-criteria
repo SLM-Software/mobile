@@ -1,0 +1,25 @@
+-x
+objective-c
+-arch
+armv7
+-std=c99
+-fobjc-arc
+-fmodules
+-fmodules-cache-path=/Users/fcheu00/SourceTree/Spotlightmart/install/ModuleCache
+-fbuild-session-file=/Users/fcheu00/SourceTree/Spotlightmart/install/ModuleCache/Session.modulevalidation
+-fpascal-strings
+-O0
+-isysroot
+/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk
+-miphoneos-version-min=9.0
+-g
+-fembed-bitcode-marker
+-iquote
+-iquote
+-I/Users/fcheu00/SourceTree/Spotlightmart/install/Spotlightmart-awhrrolbyqcyhxdkbcwmlaxpykdf/Build/Products/Debug-iphoneos/include
+-F/Users/fcheu00/SourceTree/Spotlightmart/install/Spotlightmart-awhrrolbyqcyhxdkbcwmlaxpykdf/Build/Products/Debug-iphoneos
+-DDEBUG
+arm-apple-darwin16.7.0
+"4.2.1 Compatible Apple LLVM 8.1.0 (clang-802.0.42)"
+SDK_PRODUCT_BUILD_VERSION=14E8301
+14E8301
