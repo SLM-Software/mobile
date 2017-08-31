@@ -1,27 +1,27 @@
 <div class="container">
     <div class="list-group">
-        <a href="#" style="overflow: hidden;" class="list-group-item">
+        <a ng-click="Edit('Photo')" style="overflow: hidden;" class="list-group-item">
             Profile Picture
-            <img class="pull-right" src="img/40x40_portrait.jpg"/>
+            <img class="pull-right" src="{{ photoSrc }}"/>
         </a>
-        <a href="#" class="list-group-item">
-        First Name <label class="pull-right">Joe</label></a>
-        <a href="#" class="list-group-item">
-        Last Name <label class="pull-right">Blow</label></a>
-        <a href="#" class="list-group-item">
-        Phone <label class="pull-right">555-555-5555</label></a>
-        <a href="#" class="list-group-item">
-        Email <label class="pull-right">joe.blow@blowme.com</label></a>
-        <a href="#" class="list-group-item">
-        Street Address <label class="pull-right">111 My Street</label></a>
-        <a href="#" class="list-group-item">
-        City <label class="pull-right">My City</label></a>
-        <a href="#" class="list-group-item">
-        State <label class="pull-right">CA</label></a>
-        <a href="#" class="list-group-item">
-        Zip Code <label class="pull-right">99999</label></a>
-        <a href="#" class="list-group-item">
-        Country <label class="pull-right">US</label></a>
+        <a ng-click="Edit('First name')" class="list-group-item">
+        First Name <label class="pull-right">{{ firstname }}</label></a>
+        <a ng-click="Edit('Last name')" class="list-group-item">
+        Last Name <label class="pull-right">{{ lastname }}</label></a>
+        <a ng-click="Edit('Phone')" class="list-group-item">
+        Phone <label class="pull-right">{{ phone }}</label></a>
+        <a ng-click="Edit('Email')" class="list-group-item">
+        Email <label class="pull-right">{{ email }}</label></a>
+        <a ng-click="Edit('Address')" class="list-group-item">
+        Street Address <label class="pull-right">{{ address }}</label></a>
+        <a ng-click="Edit('City')" class="list-group-item">
+        City <label class="pull-right">{{ city }}</label></a>
+        <a ng-click="Edit('State')" class="list-group-item">
+        State <label class="pull-right">{{ state }}</label></a>
+        <a ng-click="Edit('Zip')" class="list-group-item">
+        Zip Code <label class="pull-right">{{ zip }}</label></a>
+        <a ng-click="Edit('Country')" class="list-group-item">
+        Country <label class="pull-right">{{ country }}</label></a>
 
     </div>
 </div>

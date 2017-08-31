@@ -1,0 +1,18 @@
+<div class="modal-header">
+    <div class="form-group">
+        <button type="button" class="close" ng-click="cancel()">&times;</button>
+        <h3>Edit</h3>
+    </div>
+</div>
+<div class="modal-body">
+    <!-- First Name -->
+    <div class="form-group">
+        <label>{{ field }}</label>
+        <input type="text" class="form-control" ng-model="input" ng-hide="field == 'Photo'">
+    </div>
+</div>
+<div class="modal-footer">
+    <!-- SUBMIT -->
+    <button class="btn btn-primary" ng-click="Save()" ng-disabled="form.userForm.$invalid">Save</button>
+    <button class="btn btn-danger" ng-click="Close()" ng-disabled="form.userForm.$invalid">Cancel</button>
+</div>
