@@ -14,6 +14,7 @@
         "cordova-browser": "^4.1.0",
         "cordova-ios": "^4.4.0",
         "cordova-plugin-actionsheet": "^2.3.3",
+        "cordova-plugin-camera": "^2.4.1",
         "cordova-plugin-compat": "^1.1.0",
         "cordova-plugin-console": "git+https://github.com/apache/cordova-plugin-console.git",
         "cordova-plugin-facebook4": "git+https://github.com/jeduan/cordova-plugin-facebook4.git",
@@ -31,7 +32,11 @@
             },
             "cordova-plugin-inappbrowser": {},
             "cordova-plugin-console": {},
-            "cordova-plugin-actionsheet": {}
+            "cordova-plugin-actionsheet": {},
+            "cordova-plugin-camera": {
+                "CAMERA_USAGE_DESCRIPTION": "Spotlightmart",
+                "PHOTOLIBRARY_USAGE_DESCRIPTION": "Spotlightmart"
+            }
         },
         "platforms": [
             "browser",

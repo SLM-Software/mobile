@@ -26,6 +26,11 @@
         },
         "cordova-plugin-actionsheet": {
             "PACKAGE_NAME": "com.spotlight.retail"
+        },
+        "cordova-plugin-camera": {
+            "CAMERA_USAGE_DESCRIPTION": "Spotlightmart",
+            "PHOTOLIBRARY_USAGE_DESCRIPTION": "Spotlightmart",
+            "PACKAGE_NAME": "com.spotlight.retail"
         }
     },
     "dependent_plugins": {

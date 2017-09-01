@@ -31,7 +31,36 @@ SpotlightmartApp.controller('mdlPersonalDetailCtrl', function ($scope, CordovaSe
               winphoneEnableCancelButton : true,
             };
             window.plugins.actionsheet.show(options, function(buttonIndex) {
-                alert("Button clicked : " + buttonIndex);
+                // Take a picture
+                if (buttonIndex == 1)
+                {
+                    navigator.camera.getPicture(
+                        function(rawData)
+                        {},
+                        function(error)
+                        {},
+                        { 
+                            quality: 50,
+                            destinationType: Camera.DestinationType.DATA_URI,
+                            sourceType: Camera.PictureSourceType.CAMERA
+                        }
+                    );
+                }
+                // Select from album
+                else if (buttonIndex == 2)
+                {
+                    navigator.camera.getPicture(
+                        function(rawData)
+                        {},
+                        function(error)
+                        {},
+                        { 
+                            quality: 50,
+                            destinationType: Camera.DestinationType.DATA_URI,
+                            sourceType: Camera.PictureSourceType.PHOTOLIBRARY
+                        }
+                    );
+                }
             });
         }
     });
