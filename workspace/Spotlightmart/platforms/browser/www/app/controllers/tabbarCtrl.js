@@ -25,7 +25,8 @@ SpotlightmartApp.controller('tabbarCtrl', function ($scope, CordovaService, $loc
         {
             if (tabname == 'Home')
             {
-                location.href="/index.html#/Home";                
+                $scope.selectedTab = 'Home';
+                $location.path("/Home");
             }
             else if (tabname == 'Cart')
             {
@@ -37,10 +38,18 @@ SpotlightmartApp.controller('tabbarCtrl', function ($scope, CordovaService, $loc
             }
             else if (tabname == 'Settings')
             {
-                $location.path("/Settings");
                 $scope.selectedTab = 'Settings';
+                $location.path("/Settings");
             }
             console.log("Current selected tab : " + $scope.selectedTab);
+        }
+        
+        $scope.isActive = function(viewName)
+        {
+            if ($location.path().indexOf(viewName) > -1)
+                return 'active';
+            else
+                return '';
         }
     });
 });

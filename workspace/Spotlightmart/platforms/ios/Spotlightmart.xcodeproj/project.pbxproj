@@ -5,7 +5,6 @@
 	};
 	objectVersion = 46;
 	objects = {
-
 /* Begin PBXBuildFile section */
 		0207DA581B56EA530066E2B4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0207DA571B56EA530066E2B4 /* Images.xcassets */; };
 		0A5632D0B70441C2909166B8 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADE1E7005F924AAEA550343F /* Bolts.framework */; };
@@ -24,6 +23,7 @@
 		D0E5FC96BB8C46F4B802E991 /* CDVInAppBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = 5514881898C9480C9604C213 /* CDVInAppBrowser.m */; };
 		DDF5E39D17194ADE81711258 /* CDVLocalFilesystem.m in Sources */ = {isa = PBXBuildFile; fileRef = F21A9DF9DEC341698ED2F2FC /* CDVLocalFilesystem.m */; };
 		E96B79021E3E4834A50E468C /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6BC2F2A41F2411693DC96BA /* FBSDKCoreKit.framework */; };
+		90D5670FCCB04CF7AD09314D /* ActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 167B7B5A2BB34BDABAF41793 /* ActionSheet.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +88,8 @@
 		F21A9DF9DEC341698ED2F2FC /* CDVLocalFilesystem.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = CDVLocalFilesystem.m; path = "cordova-plugin-file/CDVLocalFilesystem.m"; sourceTree = "<group>"; };
 		F2A6FAF488064FAAB55EEE07 /* CDVLocalFilesystem.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = CDVLocalFilesystem.h; path = "cordova-plugin-file/CDVLocalFilesystem.h"; sourceTree = "<group>"; };
 		F840E1F0165FE0F500CFE078 /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = Spotlightmart/config.xml; sourceTree = "<group>"; };
+		167B7B5A2BB34BDABAF41793 /* ActionSheet.m */ = {isa = PBXFileReference; name = "ActionSheet.m"; path = "cordova-plugin-actionsheet/ActionSheet.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		DEF307513341482EBA85DB97 /* ActionSheet.h */ = {isa = PBXFileReference; name = "ActionSheet.h"; path = "cordova-plugin-actionsheet/ActionSheet.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,6 +215,8 @@
 				9F8C54284991493DB6F696E7 /* CDVInAppBrowser.h */,
 				E15D7617EAB1421DA2D52C38 /* CDVLogger.m */,
 				8EE6002E16DC4B6C8EA9BF3D /* CDVLogger.h */,
+				167B7B5A2BB34BDABAF41793 /* ActionSheet.m */,
+				DEF307513341482EBA85DB97 /* ActionSheet.h */,
 			);
 			name = Plugins;
 			path = Spotlightmart/Plugins;
@@ -352,6 +356,7 @@
 				B94B567ACDBE4DD491EA0C0E /* CDVAssetLibraryFilesystem.m in Sources */,
 				D0E5FC96BB8C46F4B802E991 /* CDVInAppBrowser.m in Sources */,
 				1141B47E27404A0FAEFE61A6 /* CDVLogger.m in Sources */,
+				90D5670FCCB04CF7AD09314D /* ActionSheet.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

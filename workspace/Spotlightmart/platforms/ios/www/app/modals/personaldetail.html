@@ -8,7 +8,8 @@
     <!-- First Name -->
     <div class="form-group">
         <label>{{ field }}</label>
-        <input type="text" class="form-control" ng-model="input" ng-hide="field == 'Photo'">
+        <input type="text" class="form-control" ng-model="input" ng-show="field != 'Photo'">
+        <p class="text-center" ng-show="field == 'Photo'"><button class="btn btn-default" ng-click="EditPhoto()" ><img src="{{ input }}" /></button></p>
     </div>
 </div>
 <div class="modal-footer">

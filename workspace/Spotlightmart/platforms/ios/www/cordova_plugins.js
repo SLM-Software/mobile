@@ -205,6 +205,14 @@ module.exports = [
         "clobbers": [
             "cordova.logger"
         ]
+    },
+    {
+        "id": "cordova-plugin-actionsheet.ActionSheet",
+        "file": "plugins/cordova-plugin-actionsheet/www/ActionSheet.js",
+        "pluginId": "cordova-plugin-actionsheet",
+        "clobbers": [
+            "window.plugins.actionsheet"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -215,7 +223,8 @@ module.exports.metadata =
     "cordova-plugin-file": "4.3.3",
     "cordova-plugin-whitelist": "1.3.2",
     "cordova-plugin-inappbrowser": "1.7.1",
-    "cordova-plugin-console": "1.0.8-dev"
+    "cordova-plugin-console": "1.0.8-dev",
+    "cordova-plugin-actionsheet": "2.3.3"
 };
 // BOTTOM OF METADATA
 });

@@ -63,7 +63,7 @@ SpotlightmartApp.config(function ($routeProvider, $locationProvider) {
             templateUrl: 'app/views/settings.html',
             controller: 'settingsCtrl'
         })
-        .when('/Personal/', {
+        .when('/Settings/Personal/', {
             templateUrl: 'app/views/personal.html',
             controller: 'personalCtrl'
         })
@@ -85,5 +85,21 @@ SpotlightmartApp.controller('indexCtrl', function ($scope, CordovaService, $loca
             mdlLogin.result.then(function(user) {
             });
         };
+        
+        $scope.isLeftNevButtonHidden = function() {
+            console.log("Current path : " + $location.path());
+            if ($location.path() == '/Settings/Personal/')
+            {
+                $("#btnLeftNav").removeClass("hidden");
+                return false;                    
+            }
+            else
+                return true;
+        }
+        
+        $scope.leftNavButtonClicked = function() {
+            if ($location.path() == '/Settings/Personal/')
+                $location.path('/Settings');
+        }
     });
 });

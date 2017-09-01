@@ -24,6 +24,7 @@
     </platform>
     <engine name="browser" spec="^4.1.0" />
     <engine name="ios" spec="^4.4.0" />
+    <plugin name="cordova-plugin-actionsheet" spec="^2.3.3" />
     <plugin name="cordova-plugin-console" spec="git+https://github.com/apache/cordova-plugin-console.git" />
     <plugin name="cordova-plugin-facebook4" spec="git+https://github.com/jeduan/cordova-plugin-facebook4.git">
         <variable name="APP_ID" value="1915895988671514" />

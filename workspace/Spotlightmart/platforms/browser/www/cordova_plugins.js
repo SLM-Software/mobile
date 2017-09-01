@@ -201,6 +201,22 @@ module.exports = [
         "id": "cordova-plugin-inappbrowser.InAppBrowserProxy",
         "pluginId": "cordova-plugin-inappbrowser",
         "runs": true
+    },
+    {
+        "file": "plugins/cordova-plugin-actionsheet/www/ActionSheet.js",
+        "id": "cordova-plugin-actionsheet.ActionSheet",
+        "pluginId": "cordova-plugin-actionsheet",
+        "clobbers": [
+            "window.plugins.actionsheet"
+        ]
+    },
+    {
+        "file": "plugins/cordova-plugin-actionsheet/src/browser/ActionSheetProxy.js",
+        "id": "cordova-plugin-actionsheet.ActionSheetProxy",
+        "pluginId": "cordova-plugin-actionsheet",
+        "merges": [
+            ""
+        ]
     }
 ];
 module.exports.metadata = 
@@ -211,7 +227,8 @@ module.exports.metadata =
     "cordova-plugin-file": "4.3.3",
     "cordova-plugin-facebook4": "1.9.1",
     "cordova-plugin-inappbrowser": "1.7.1",
-    "cordova-plugin-console": "1.0.8-dev"
+    "cordova-plugin-console": "1.0.8-dev",
+    "cordova-plugin-actionsheet": "2.3.3"
 }
 // BOTTOM OF METADATA
 });
