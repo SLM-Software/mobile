@@ -1,6 +1,6 @@
 <div class="container">
     <div class="row">
-        <div class="col-xs-12 text-center"><img src="img/400x400_SpotlightLogo.png" style="width:50%; height: 25%"></div>
+        <div class="col-xs-12 text-center"><img src="img/400x400_SpotlightLogo.png" style="width:50%; height: 10%"></div>
     </div>
     <div class="row">
         <div class="col-xs-12"><h3>{{ name }}</h3></div>
@@ -18,9 +18,8 @@
         </div>
     </div>
     <br>
-    <hr>
-    <div class="row">
-        <div class="slider">
+    <div class="row" >
+        <div class="slider" style="border-top: 1px lightgrey solid; padding-top: 10px; border-bottom: 1px lightgrey solid; padding-bottom: 10px;">
             <div ng-repeat="slide in slides" class="slide slide-animation nonDraggableImage"
                 ng-swipe-right="nextSlide()" ng-swipe-left="prevSlide()"
                 ng-hide="!isCurrentSlideIndex($index)">        
@@ -39,5 +38,4 @@
             </div>
         </div>
     </div>
-    <hr>
 </div>
