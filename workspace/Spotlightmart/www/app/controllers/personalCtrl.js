@@ -1,15 +1,18 @@
 SpotlightmartApp.controller('personalCtrl', function ($scope, CordovaService, $location, $rootScope, $uibModal) {
     CordovaService.ready.then(function () {
-        $scope.photoSrc="img/40x40_portrait.jpg";
-        $scope.firstname = "Joe";
-        $scope.lastname = "Blow";
-        $scope.phone = "555-555-5555";
-        $scope.address = "111 My Street";
-        $scope.city = "My City";
-        $scope.state = "CA";
-        $scope.country = "US";
-        $scope.email = "joe.blow@blowme.com";
-        $scope.zip = "99999";
+        var oUser = {
+            firstname : "Joe",
+            lastname : "Blow",
+            phone : "555-555-5555",
+            address : "111 My Street",
+            city : "My City",
+            state : "CA",
+            country : "US",
+            zip : "99999",
+            email : "joe.blow@blowme.com",
+            photoSrc : "img/40x40_portrait.jpg"
+        };
+        $scope.user = oUser;
         init();
         
         function init() {};
@@ -19,34 +22,34 @@ SpotlightmartApp.controller('personalCtrl', function ($scope, CordovaService, $l
             switch (field)
             {
                 case "Photo":
-                    value = $scope.photoSrc;
+                    value = $scope.user.photoSrc;
                     break;
                 case "First name":
-                    value = $scope.firstname;
+                    value = $scope.user.firstname;
                     break;
                 case "Last name":
-                    value = $scope.lastname;
+                    value = $scope.user.lastname;
                     break;
                 case "Phone":
-                    value = $scope.phone;
+                    value = $scope.user.phone;
                     break;
                 case "Address":
-                    value = $scope.address;
+                    value = $scope.user.address;
                     break;
                 case "City":
-                    value = $scope.city;
+                    value = $scope.user.city;
                     break;
                 case "State":
-                    value = $scope.state;
+                    value = $scope.user.state;
                     break;
                 case "Country":
-                    value = $scope.country;
+                    value = $scope.user.country;
                     break;
                 case "Email":
-                    value = $scope.email;
+                    value = $scope.user.email;
                     break;
                 case "Zip":
-                    value = $scope.zip;
+                    value = $scope.user.zip;
                     break;
             }
             console.log("Editing " + field + " with " + value);
@@ -66,6 +69,7 @@ SpotlightmartApp.controller('personalCtrl', function ($scope, CordovaService, $l
                             });
             
             mdlEdit.result.then(function(user) {
+                console.log("Modal close with result : %o", user);
             });
         }
     });

@@ -9,7 +9,7 @@ SpotlightmartApp.controller('mdlPersonalDetailCtrl', function ($scope, CordovaSe
         }
         
         $scope.Save = function() {
-            
+            $modalInstance.close($scope.input);
         }
         
         $scope.Close = function() {

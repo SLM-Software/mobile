@@ -1,27 +1,27 @@
 <div class="container">
     <div class="list-group">
-        <a ng-click="Edit('Photo')" style="overflow: hidden;" class="list-group-item">
+        <a ng-click="Edit('Photo'); $event.stopPropagation();" style="overflow: hidden;" class="list-group-item">
             Profile Picture
-            <img class="pull-right" src="{{ photoSrc }}"/>
+            <img class="pull-right" src="{{ user.photoSrc }}"/>
         </a>
-        <a ng-click="Edit('First name')" class="list-group-item">
-        First Name <label class="pull-right">{{ firstname }}</label></a>
-        <a ng-click="Edit('Last name')" class="list-group-item">
-        Last Name <label class="pull-right">{{ lastname }}</label></a>
-        <a ng-click="Edit('Phone')" class="list-group-item">
-        Phone <label class="pull-right">{{ phone }}</label></a>
-        <a ng-click="Edit('Email')" class="list-group-item">
-        Email <label class="pull-right">{{ email }}</label></a>
-        <a ng-click="Edit('Address')" class="list-group-item">
-        Street Address <label class="pull-right">{{ address }}</label></a>
-        <a ng-click="Edit('City')" class="list-group-item">
-        City <label class="pull-right">{{ city }}</label></a>
-        <a ng-click="Edit('State')" class="list-group-item">
-        State <label class="pull-right">{{ state }}</label></a>
-        <a ng-click="Edit('Zip')" class="list-group-item">
-        Zip Code <label class="pull-right">{{ zip }}</label></a>
-        <a ng-click="Edit('Country')" class="list-group-item">
-        Country <label class="pull-right">{{ country }}</label></a>
+        <a ng-click="Edit('First name');" class="list-group-item">
+        First Name <label class="pull-right">{{ user.firstname }}</label></a>
+        <a ng-click="Edit('Last name');" class="list-group-item">
+        Last Name <label class="pull-right">{{ user.lastname }}</label></a>
+        <a ng-click="Edit('Phone');" class="list-group-item">
+        Phone <label class="pull-right">{{ user.phone }}</label></a>
+        <a ng-click="Edit('Email');" class="list-group-item">
+        Email <label class="pull-right">{{ user.email }}</label></a>
+        <a ng-click="Edit('Address');" class="list-group-item">
+        Street Address <label class="pull-right">{{ user.address }}</label></a>
+        <a ng-click="Edit('City');" class="list-group-item">
+        City <label class="pull-right">{{ user.city }}</label></a>
+        <a ng-click="Edit('State');" class="list-group-item">
+        State <label class="pull-right">{{ user.state }}</label></a>
+        <a ng-click="Edit('Zip');" class="list-group-item">
+        Zip Code <label class="pull-right">{{ user.zip }}</label></a>
+        <a ng-click="Edit('Country');" class="list-group-item">
+        Country <label class="pull-right">{{ user.country }}</label></a>
 
     </div>
 </div>
