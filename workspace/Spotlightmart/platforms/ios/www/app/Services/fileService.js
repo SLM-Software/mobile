@@ -1,6 +1,12 @@
-SpotlightmartApp.factory('FileService', function() {
+SpotlightmartApp.factory('FileService', function(window) {
+    function errorCallback(error)
+    {
+        console.log("File I/O Exception : %o", error);
+    }
+    
     return {
         getDirectory: function(parentDir, newDir) {
+            /*
             parentDir.getDirectory(
                 newDir, 
                 { create : true },
@@ -13,27 +19,40 @@ SpotlightmartApp.factory('FileService', function() {
                     return { success : false, error : error };
                 }
             )
+            */
         },
-        writeJSONToFile: function(dirEntry, fileName, jsonObj) {
-            dirEntry.getFile(fileName,
-                {create: true, exclusive: false},
-                function (fileEntry) {
-                    fileEntry.createWriter(function(fileWriter) {
-                        fileWriter.onwriteend = function () {
-                            console.log(dirEntry + fileName + " saved successfully");
-                        }
-                        
-                        fileWriter.onerror + function (error) {
-                            console.log(dirEntry + fileName + " saved with error : %o", error);
-                        }
-                        
-                        fileWriter.write(jsobObj);
-                    })
-                },
-                function (error) {
-                    console.log("Failed to get file obj for " + dirEntry + fileName + " with error : %o", error);
-                }
-            );
-        }
+        writeJSONToFile: function(dirName, fileName, jsonObj) {
+                window.resolveLocalFileSystemURL(dirName,
+                    function(dirEntry) {
+                        console.log("Directory opened successfully", dirEntry);
+                        dirEntry.getFile(fileName,
+                            {create: true},
+                            function(fileEntry) {
+                                console.log("File opened successfully", fileEntry);
+                            
+                                fileEntry.createWriter(
+                                    function(fileWriter) {
+                                    
+                                        console.log("Writing %o", jsonObj);
+                                        fileWriter.write(jsonObj);
+                                        console.log("Write successful!");
+                                    
+                                    },
+                                    function (error) {
+                                        console.log("File I/O Exception : %o", error);
+                                    }
+                                );
+                            
+                            },
+                            function (error) {
+                                console.log("File I/O Exception : %o", error);
+                            }
+                        );
+                    },
+                    function (error) {
+                        console.log("File I/O Exception : %o", error);
+                    }
+                );
+        };
     }
 });

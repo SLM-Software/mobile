@@ -18,41 +18,7 @@ SpotlightmartApp.controller('personalCtrl', function ($scope, CordovaService, $l
         function init() {};
         
         $scope.Edit = function(field) {
-            var value = "";
-            switch (field)
-            {
-                case "Photo":
-                    value = $scope.user.photoSrc;
-                    break;
-                case "First name":
-                    value = $scope.user.firstname;
-                    break;
-                case "Last name":
-                    value = $scope.user.lastname;
-                    break;
-                case "Phone":
-                    value = $scope.user.phone;
-                    break;
-                case "Address":
-                    value = $scope.user.address;
-                    break;
-                case "City":
-                    value = $scope.user.city;
-                    break;
-                case "State":
-                    value = $scope.user.state;
-                    break;
-                case "Country":
-                    value = $scope.user.country;
-                    break;
-                case "Email":
-                    value = $scope.user.email;
-                    break;
-                case "Zip":
-                    value = $scope.user.zip;
-                    break;
-            }
-            console.log("Editing " + field + " with " + value);
+            console.log("Editing " + field);
             var mdlEdit = $uibModal.open({
                                 animation: true,
                                 templateUrl: 'app/modals/personaldetail.html',
@@ -62,14 +28,15 @@ SpotlightmartApp.controller('personalCtrl', function ($scope, CordovaService, $l
                                     field: function () {
                                         return field;
                                     },
-                                    value: function () {
-                                        return value;
+                                    user: function () {
+                                        return $scope.user;
                                     }
                                 }
                             });
             
             mdlEdit.result.then(function(user) {
-                console.log("Modal close with result : %o", user);
+                console.log("Modal close with result : %o", user)
+                $scope.user = user;
             });
         }
     });

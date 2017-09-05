@@ -1,15 +1,93 @@
-SpotlightmartApp.controller('mdlPersonalDetailCtrl', function ($scope, CordovaService, $modalInstance, $uibModal, field, value) {
+SpotlightmartApp.controller('mdlPersonalDetailCtrl', function ($scope, CordovaService, $cordovaFile, $modalInstance, $uibModal, field, user) {
     CordovaService.ready.then(function () {
         $scope.field = field;
-        $scope.input = value;
+        $scope.input;
+        $scope.user = user;
         
         init();
         
         function init() {
+            console.log("Initializing input");
+            switch (field)
+            {
+                case "Photo":
+                    $scope.input = $scope.user.photoSrc;
+                    break;
+                case "First name":
+                    $scope.input = $scope.user.firstname;
+                    break;
+                case "Last name":
+                    $scope.input = $scope.user.lastname;
+                    break;
+                case "Phone":
+                    $scope.input = $scope.user.phone;
+                    break;
+                case "Address":
+                    $scope.input = $scope.user.address;
+                    break;
+                case "City":
+                    $scope.input = $scope.user.city;
+                    break;
+                case "State":
+                    $scope.input = $scope.user.state;
+                    break;
+                case "Country":
+                    $scope.input = $scope.user.country;
+                    break;
+                case "Email":
+                    $scope.input = $scope.user.email;
+                    break;
+                case "Zip":
+                    $scope.input = $scope.user.zip;
+                    break;
+            }
+            console
         }
         
         $scope.Save = function() {
-            $modalInstance.close($scope.input);
+            switch (field)
+            {
+                case "Photo":
+                    $scope.user.photoSrc = $scope.input;
+                    break;
+                case "First name":
+                    $scope.user.firstname = $scope.input;
+                    break;
+                case "Last name":
+                    $scope.user.lastname = $scope.input;
+                    break;
+                case "Phone":
+                    $scope.user.phone = $scope.input;
+                    break;
+                case "Address":
+                    $scope.user.address = $scope.input;
+                    break;
+                case "City":
+                    $scope.user.city = $scope.input;
+                    break;
+                case "State":
+                    $scope.user.state = $scope.input;
+                    break;
+                case "Country":
+                    $scope.user.country = $scope.input;
+                    break;
+                case "Email":
+                    $scope.user.email = $scope.input;
+                    break;
+                case "Zip":
+                    $scope.user.zip = $scope.input;
+                    break;
+            }
+            console.log("Saving %o to user.dat", $scope.user);
+            $cordovaFile.writeFile(cordova.file.dataDirectory, "user.dat", JSON.stringify($scope.user), true).then(
+                function(result) {
+                    console.log("Successfully save user data to user.dat");
+                    $modalInstance.close($scope.user);
+                },
+                function(error) {
+                    console.log("Error when trying to save data to user.dat with error : %o", error);
+                    alert("Failed to save user data, please try again");
+                });
         }
         
         $scope.Close = function() {
@@ -102,6 +180,13 @@ SpotlightmartApp.controller('mdlPersonalDetailCtrl', function ($scope, CordovaSe
                 );
             }
             
+            function saveJSON(fileName, jsonObj)
+            {
+                console.log("Saving %o to " + fileName, jsonObj);
+                var res = $cordovaFile.writeFile(cordova.file.dataDirectory, fileName, JSON.stringify(jsonObj), true);
+                console.log("Save result : %o", res);
+            }
+        
             function errorCallback(error)
             {
                 console.log("Error : %o", error);
