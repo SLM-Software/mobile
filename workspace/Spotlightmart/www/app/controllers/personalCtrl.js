@@ -1,21 +1,22 @@
-SpotlightmartApp.controller('personalCtrl', function ($scope, CordovaService, $location, $rootScope, $uibModal) {
+SpotlightmartApp.controller('personalCtrl', function ($scope, CordovaService, $cordovaFile, $location, $rootScope, $uibModal) {
     CordovaService.ready.then(function () {
-        var oUser = {
-            firstname : "Joe",
-            lastname : "Blow",
-            phone : "555-555-5555",
-            address : "111 My Street",
-            city : "My City",
-            state : "CA",
-            country : "US",
-            zip : "99999",
-            email : "joe.blow@blowme.com",
-            photoSrc : "img/40x40_portrait.jpg"
-        };
-        $scope.user = oUser;
+        $scope.user;
         init();
         
-        function init() {};
+        function init() {
+            console.log("Reading user profile from : " + cordova.file.dataDirectory + USER_DATA_FILE);
+            $cordovaFile.readAsText(cordova.file.dataDirectory, USER_DATA_FILE).then(
+                function (data) {
+                    console.log("User data read from file : %o", data);
+                    var oUser = JSON.parse(data);
+                    $scope.user = oUser;
+                },
+                function (error) {
+                    console.log("Failed to read user profile with error : %o", error);
+                    alert("Failed to read user profile, please try again.");
+                }
+            )
+        }
         
         $scope.Edit = function(field) {
             console.log("Editing " + field);
