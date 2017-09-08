@@ -1,4 +1,4 @@
-SpotlightmartApp.controller('mdlPersonalDetailCtrl', function ($scope, CordovaService, UserService, $cordovaFile, $modalInstance, $uibModal, field, user) {
+SpotlightmartApp.controller('mdlPersonalDetailCtrl', function ($scope, CordovaService, $cordovaFile, $modalInstance, $uibModal, field, user) {
     CordovaService.ready.then(function () {
         $scope.field = field;
         $scope.input;
@@ -124,7 +124,9 @@ SpotlightmartApp.controller('mdlPersonalDetailCtrl', function ($scope, CordovaSe
                             quality: 50,
                             destinationType: Camera.DestinationType.DATA_URL,
                             encodingType: Camera.EncodingType.JPEG,
-                            sourceType: Camera.PictureSourceType.CAMERA
+                            sourceType: Camera.PictureSourceType.CAMERA,
+                            targetWidth : 40,
+                            targetHeight : 40
                         }
                     );
                 }
@@ -163,7 +165,9 @@ SpotlightmartApp.controller('mdlPersonalDetailCtrl', function ($scope, CordovaSe
                             quality: 50,
                             destinationType: Camera.DestinationType.FILE_URI,
                             encodingType: Camera.EncodingType.JPEG,
-                            sourceType: Camera.PictureSourceType.PHOTOLIBRARY
+                            sourceType: Camera.PictureSourceType.PHOTOLIBRARY,
+                            targetWidth : 40,
+                            targetHeight : 40
                         }
                     );
                 }

@@ -41,7 +41,6 @@ SpotlightmartApp.controller('mdlPersonalDetailCtrl', function ($scope, CordovaSe
                     $scope.input = $scope.user.zip;
                     break;
             }
-            console
         }
         
         $scope.Save = function() {
@@ -78,10 +77,10 @@ SpotlightmartApp.controller('mdlPersonalDetailCtrl', function ($scope, CordovaSe
                     $scope.user.zip = $scope.input;
                     break;
             }
-            console.log("Saving %o to user.dat", $scope.user);
-            $cordovaFile.writeFile(cordova.file.dataDirectory, "user.dat", JSON.stringify($scope.user), true).then(
+            console.log("Saving %o to " + cordova.file.dataDirectory + USER_DATA_FILE, $scope.user);
+            $cordovaFile.writeFile(cordova.file.dataDirectory, USER_DATA_FILE, JSON.stringify($scope.user), true).then(
                 function(result) {
-                    console.log("Successfully save user data to user.dat");
+                    console.log("Successfully save user data to " + USER_DATA_FILE);
                     $modalInstance.close($scope.user);
                 },
                 function(error) {
@@ -125,7 +124,9 @@ SpotlightmartApp.controller('mdlPersonalDetailCtrl', function ($scope, CordovaSe
                             quality: 50,
                             destinationType: Camera.DestinationType.DATA_URL,
                             encodingType: Camera.EncodingType.JPEG,
-                            sourceType: Camera.PictureSourceType.CAMERA
+                            sourceType: Camera.PictureSourceType.CAMERA,
+                            targetWidth : 40,
+                            targetHeight : 40
                         }
                     );
                 }
@@ -135,8 +136,26 @@ SpotlightmartApp.controller('mdlPersonalDetailCtrl', function ($scope, CordovaSe
                     navigator.camera.getPicture(
                         function(imgFile)
                         {
+                            var binRawData;
+
                             console.log("Image from photo album : " + imgFile);
-                            movePic(imgFile);
+                            console.log("Moving " + cordova.file.tempDirectory + imgFile.substr(imgFile.lastIndexOf('/')+1, imgFile.length) + " to " + cordova.file.dataDirectory + "portrait.jpg");
+                            //movePic(imgFile);
+                            $cordovaFile.moveFile(
+                                cordova.file.tempDirectory,
+                                imgFile.substr(imgFile.lastIndexOf('/')+1, imgFile.length),
+                                cordova.file.dataDirectory,
+                                USER_PORTRAIT_FILE).then(
+                                    function (result) {
+                                        console.log("Image file moved successfully");
+                                        $scope.input = cordova.file.dataDirectory + "portrait.jpg";
+                                    },
+                                    function (error) {
+                                        console.log("Failed to move image file with error : %o", error);
+                                        alert("Failed to set the profile picture, please try again.");
+                                        return;
+                                    }
+                            );
                         },
                         function(error)
                         {
@@ -146,7 +165,9 @@ SpotlightmartApp.controller('mdlPersonalDetailCtrl', function ($scope, CordovaSe
                             quality: 50,
                             destinationType: Camera.DestinationType.FILE_URI,
                             encodingType: Camera.EncodingType.JPEG,
-                            sourceType: Camera.PictureSourceType.PHOTOLIBRARY
+                            sourceType: Camera.PictureSourceType.PHOTOLIBRARY,
+                            targetWidth : 40,
+                            targetHeight : 40
                         }
                     );
                 }

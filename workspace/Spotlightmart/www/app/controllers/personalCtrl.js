@@ -1,4 +1,4 @@
-SpotlightmartApp.controller('personalCtrl', function ($scope, CordovaService, UserService, $cordovaFile, $location, $rootScope, $uibModal) {
+SpotlightmartApp.controller('personalCtrl', function ($scope, CordovaService, $cordovaFile, $location, $rootScope, $uibModal) {
     CordovaService.ready.then(function () {
         $scope.oUser;
         init();

@@ -1,8 +1,8 @@
 <div class="container">
     <div class="list-group">
-        <a ng-click="Edit('Photo'); $event.stopPropagation();" style="overflow: hidden;" class="list-group-item">
+        <a ng-click="Edit('Photo');" style="overflow: hidden;" class="list-group-item">
             Profile Picture
-            <img class="pull-right" src="{{ user.photoSrc }}"/>
+            <img class="pull-right" style="width:40px; height=40px;" src="{{ user.photoSrc }}"/>
         </a>
         <a ng-click="Edit('First name');" class="list-group-item">
         First Name <label class="pull-right">{{ user.firstname }}</label></a>

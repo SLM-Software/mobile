@@ -1,38 +1,43 @@
-SpotlightmartApp.factory('UserService', function(Loki) {
-    var _db;
-    var _user;
-    
-    return {
-        initDB: function() {
-            var adapter = new LokiCordovaFSAdapter({"prefix" : "user"});
-            _db = new Loki('userDB',
-                            {
-                                autosave: true,
-                                autosaveInterval: 1000, // 1 sec
-                                adapter: adapter
-                            });
-        },
-        getUser: function() {
-            var option = {};
-            
-            _db.loadDatabase(option, function() {
-                _user = _db.getCollection('user');
-                
-                if (!_user)
-                {
-                    _user = _db.addCollection('user');
+SpotlightmartApp.factory('UserService', function($cordovaFile) {
+    var oUser = null;
+    var obj = {};
+
+    obj.getUser  = function() {
+        console.log("Initializing user object");
+        if (oUser == null)
+        {
+            console.log("User is empty, need to read from user profile file");
+            $cordovaFile.readAsText(cordova.file.dataDirectory, USER_DATA_FILE).then(
+                function (userData) {
+                    console.log("Successfully extract user profile data : " + userData);
+                    oUser = JSON.parse(userData);
+                    return oUser;
+                },
+                function (error) {
+                    console.log("Failed to retrieve user profile data with error : %o", error);
+                    return error;
                 }
-                
-                return _user.data;
-            });
-        },
-        addUser: function(user) {
-            _user.insert(user);
-        }/*,
-        remove: functionAll() {
-            if (cache==null)
-                return;
-            cache.removeAll();
-        }*/
-    }
+            );
+        }
+        else
+        {
+            console.log("User is not empty, returning user object : %o", oUser);
+            return oUser;
+        }
+    };
+    obj.saveUser = function(strUser) {
+        $cordovaFile.writeFile(cordova.file.dataDirectory, USER_DATA_FILE, strUser, true).then(
+            function (success) {
+                console.log("Successfully save " + strUser + " to " + USER_DATA_FILE);
+                oUser = JSON.parse(strUser);
+            },
+            function (error) {
+                console.log("Failed to save " + strUser + " to " + USER_DATA_FILE + " with error: %o", error);
+                actionFailed = true;
+                lastException = error;
+            }
+        );
+    };
+
+    return obj;
 });
