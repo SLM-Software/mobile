@@ -1,4 +1,4 @@
-SpotlightmartApp.controller('mdlPersonalDetailCtrl', function ($scope, CordovaService, $cordovaFile, $modalInstance, $uibModal, field, user) {
+SpotlightmartApp.controller('mdlPersonalDetailCtrl', function ($scope, CordovaService, UserService, $cordovaFile, $modalInstance, $uibModal, field, user) {
     CordovaService.ready.then(function () {
         $scope.field = field;
         $scope.input;
