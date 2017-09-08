@@ -1,0 +1,11 @@
+<div class="container">
+    <h5>Credit Card</h5>
+    <div class="list-group">
+        <div ng-repeat="card in oWallet track by card.id">
+            <a href="#" ng-click="EditCard(card)" class="pull-right"><i class="glyphicon glyphicon-credit-card">VISA-x{{ card.cardno | limitTo : -4 }}</i>
+            <button class="btn btn-default" ng-click="DeleteCard(card)"><i class="glyphicon glyphicon-trash"></i></button></a>
+        </div>
+    </div>
+    <hr>
+    <button class="btn btn-primary btn-block" ng-click="AddCard()">Add New Card</button>
+</div>

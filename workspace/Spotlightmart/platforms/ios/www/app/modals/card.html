@@ -1,0 +1,38 @@
+<div class="modal-header">
+    <div class="form-group">
+        <button type="button" class="close" ng-click="cancel()">&times;</button>
+        <h3>{{ title }}</h3>
+    </div>
+</div>
+<div class="modal-body">
+    <!-- Card Number -->
+    <div class="form-group">
+        <label>Credit Card No</label>
+        <input type="number" name="cardno" class="form-control" ng-model="oCard.cardno" maxlength="16" ng-minlength="16" ng-maxlength="16" required>
+    </div>
+
+    <!-- Expiry -->
+    <div class="form-group">
+        <label>Expiry Month</label>
+        <input type="number" name="expmonth" class="form-control" ng-model="oCard.expmonth" maxlength="2" ng-minlength="1" ng-maxlength="2" required>
+        <label>Expiry Year</label>
+        <input type="number" name="expyear" class="form-control" ng-model="oCard.expyear" maxlength="2" ng-minlength="2" ng-maxlength="2" required>
+    </div>
+
+    <!-- Name -->
+    <div class="form-group">
+        <label>Name</label>
+        <input type="text" name="phone" class="form-control" ng-model="oCard.name" maxlength="50" ng-minlength="3" ng-maxlength="50" required>
+    </div>
+
+    <!-- CVV -->
+    <div class="form-group">
+        <label>CVV</label>
+        <input type="number" name="cvv" class="form-control" ng-model="oCard.cvv" maxlength="3" ng-minlength="3" ng-maxlength="3" required>
+    </div>
+
+</div>
+<div class="modal-footer">
+    <!-- SUBMIT -->
+    <button class="btn btn-primary btn-block" ng-click="save()" >Save</button>
+</div>
