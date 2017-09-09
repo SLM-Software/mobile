@@ -11,8 +11,7 @@ SpotlightmartApp.controller('mdlCardCtrl', function ($scope, CordovaService, $co
                                  expmonth : "",
                                  expyear : "",
                                  name : "",
-                                 cvv : "",
-                                 delete : false };
+                                 cvv : "" };
             }
         }
 

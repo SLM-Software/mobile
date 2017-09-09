@@ -34,8 +34,9 @@ SpotlightmartApp.controller('walletCtrl', function ($scope, CordovaService, $cor
 
         function MergeCardToWallet(newCard) {
             var blnMerged = false;
-            angular.forEach($scope.oWallet, function (index, oCard)
+            for (var i=0; i < $scope.oWallet.length; i++)
             {
+                var oCard = $scope.oWallet[i];
                 if (blnMerged == false)
                 {
                     if (newCard.cardno == oCard.cardno)
@@ -44,23 +45,25 @@ SpotlightmartApp.controller('walletCtrl', function ($scope, CordovaService, $cor
                         blnMerged = true;
                     }
                 }
-            });
+            }
 
             if (blnMerged == false)
             {
                 $scope.oWallet.push(newCard);
+                $scope.arrDelete.push({ cardno : newCard.cardno, delete : false });
             }
         }
 
         function DeleteCardFromWallet(oldCard) {
-            angular.forEach($scope.oWallet, function (index, oCard)
+            for (var i=0; i < $scope.oWallet.length; i++)
             {
+                var oCard = $scope.oWallet[i];
                 if (oCard.cardno == oldCard.cardno)
                 {
-                    console.log("Removing " + index + " credit card : %o", oCard);
-                    $scope.oWallet.splice(index);
+                    console.log("Removing " + i + " credit card : %o", oCard);
+                    $scope.oWallet.splice(i);
                 }
-            });
+            }
         }
 
         function SaveCardToFile() {
