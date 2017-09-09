@@ -1,6 +1,7 @@
 SpotlightmartApp.controller('walletCtrl', function ($scope, CordovaService, $cordovaFile, $location, $rootScope, $uibModal) {
     CordovaService.ready.then(function () {
         $scope.oWallet;
+        $scope.arrDelete = [];
         init();
         
         function init() {
@@ -9,14 +10,23 @@ SpotlightmartApp.controller('walletCtrl', function ($scope, CordovaService, $cor
                 $cordovaFile.readAsText(cordova.file.dataDirectory, USER_CARD_FILE).then(
                     function (payload)
                     {
-                        console.log("Successfully read card data : %o", payload);
                         $scope.oWallet = JSON.parse(payload);
+                        console.log("Successfully init card data : %o", $scope.oWallet);
+
+                        for (var i=0; i < $scope.oWallet.length; i++)
+                        {
+                            var oCard = $scope.oWallet[i];
+                            console.log("Initializing delete object for : %o", oCard);
+                            $scope.arrDelete.push({ "cardno" : oCard.cardno, "delete" : false});
+                        }
+                        console.log("Successfully init arrDelete : %o", $scope.arrDelete);
                     },
                     function (error)
                     {
                         console.log("Failed to read card data with error : %o", error);
                         console.log("Default to empty card list");
                         $scope.oWallet = [];
+                        $scope.arrDelete = [];
                     }
                 )
             }
@@ -114,9 +124,32 @@ SpotlightmartApp.controller('walletCtrl', function ($scope, CordovaService, $cor
             });
         }
 
+        $scope.ToggleDeleteButton = function(card, status)
+        {
+            console.log("Toggling " + card.cardno +" delete status to " + status + "...");
+            for (var i=0; i < $scope.oWallet.length; i++)
+            {
+                var oDelete = $scope.arrDelete[i];
+                if (oDelete.cardno == card.cardno)
+                {
+                    oDelete.delete = status;
+                    console.log("Setting delete to " + oDelete.delete + " for " + oDelete.cardno);
+                }
+            }
+        }
+
         $scope.ShowDeleteButton = function(card)
         {
-            card.delete = true;
+            console.log("Checking " + card.cardno + " for delete status...");
+            for (var i=0; i < $scope.oWallet.length; i++)
+            {
+                var oDelete = $scope.arrDelete[i];
+                if (oDelete.cardno == card.cardno)
+                {
+                    console.log("Delete status for " + card.cardno + " : " + oDelete.delete);
+                    return oDelete.delete;
+                }
+            }
         }
 
         $scope.DeleteCard = function(card)
