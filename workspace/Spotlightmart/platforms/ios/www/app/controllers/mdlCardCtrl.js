@@ -11,11 +11,13 @@ SpotlightmartApp.controller('mdlCardCtrl', function ($scope, CordovaService, $co
                                  expmonth : "",
                                  expyear : "",
                                  name : "",
-                                 cvv : "" };
+                                 cvv : "",
+                                 delete : false };
             }
         }
 
         $scope.save = function() {
+            console.log(title + " modal closing, returning " + JSON.stringify($scope.oCard));
             $modalInstance.close($scope.oCard);
         }
 

@@ -1,10 +1,11 @@
-<div class="container">
+<li class="container">
     <h5>Credit Card</h5>
-    <div class="list-group">
-        <div ng-repeat="card in oWallet track by card.cardno">
-            <a href="#" ng-click="EditCard(card)" ng-swipe-left="DeleteCard(card)" class="pull-left list-group-item"><i class="glyphicon glyphicon-credit-card">&nbsp;VISA-x{{ card.cardno | limitTo : -4 }}</i></a>
-        </div>
-    </div>
+    <ul class="list-group">
+        <li class="list-group-item justify-content-between" style="width:100%" ng-repeat="card in oWallet track by card.cardno">
+            <a href="#" ng-click="EditCard(card)" ng-swipe-left="ShowDeleteButton(card)" class="pull-left"><i class="glyphicon glyphicon-credit-card">&nbsp;VISA-x{{ card.cardno | limitTo : -4 }}</i></a>
+            <button class="btn btn-danger pull-right" ng-click="DeleteCard(card)" ng-show="card.delete">Delete</button>
+        </li>
+    </ul>
     <hr>
     <button class="btn btn-primary btn-block" ng-click="AddCard()">Add New Card</button>
 </div>
