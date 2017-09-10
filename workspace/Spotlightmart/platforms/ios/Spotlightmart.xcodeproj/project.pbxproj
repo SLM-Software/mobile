@@ -33,6 +33,7 @@
 		AD9113D800244B0B91C2346A /* CDVNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D801F6A8E1947549BE0B39A /* CDVNotification.m */; };
 		E19659C81DCC41679FDF5862 /* CDVNotification.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8E70DA7657664914ACD450EF /* CDVNotification.bundle */; };
 		BEC82100C5CB47C7A8BEF16A /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF52951DBE5B48F1A816EFD6 /* AudioToolbox.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		DB5990C33FD64925A6A175A7 /* ListPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C919B140D6641C19A824E9C /* ListPicker.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,6 +114,8 @@
 		3A402E36BA1440AA899FAB71 /* CDVNotification.h */ = {isa = PBXFileReference; name = "CDVNotification.h"; path = "cordova-plugin-dialogs/CDVNotification.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
 		8E70DA7657664914ACD450EF /* CDVNotification.bundle */ = {isa = PBXFileReference; name = "CDVNotification.bundle"; path = "CDVNotification.bundle"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.plug-in; explicitFileType = undefined; includeInIndex = 0; };
 		BF52951DBE5B48F1A816EFD6 /* AudioToolbox.framework */ = {isa = PBXFileReference; name = "AudioToolbox.framework"; path = "System/Library/Frameworks/AudioToolbox.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		1C919B140D6641C19A824E9C /* ListPicker.m */ = {isa = PBXFileReference; name = "ListPicker.m"; path = "cordova-plugin-listpicker/ListPicker.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		BDEF254966A6407F872D8016 /* ListPicker.h */ = {isa = PBXFileReference; name = "ListPicker.h"; path = "cordova-plugin-listpicker/ListPicker.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -258,6 +261,8 @@
 				7EB3037BD59D47BFA320425E /* CDVExif.h */,
 				4D801F6A8E1947549BE0B39A /* CDVNotification.m */,
 				3A402E36BA1440AA899FAB71 /* CDVNotification.h */,
+				1C919B140D6641C19A824E9C /* ListPicker.m */,
+				BDEF254966A6407F872D8016 /* ListPicker.h */,
 			);
 			name = Plugins;
 			path = Spotlightmart/Plugins;
@@ -403,6 +408,7 @@
 				97B30E1B1AF74372AB6B8E2E /* CDVCamera.m in Sources */,
 				472CE7CDEC2D4EE9A2CE0B76 /* CDVJpegHeaderWriter.m in Sources */,
 				AD9113D800244B0B91C2346A /* CDVNotification.m in Sources */,
+				DB5990C33FD64925A6A175A7 /* ListPicker.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

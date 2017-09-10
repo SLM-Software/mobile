@@ -253,6 +253,14 @@ module.exports = [
         "merges": [
             "navigator.notification"
         ]
+    },
+    {
+        "id": "cordova-plugin-listpicker.ListPicker",
+        "file": "plugins/cordova-plugin-listpicker/www/ListPicker.js",
+        "pluginId": "cordova-plugin-listpicker",
+        "clobbers": [
+            "window.plugins.listpicker"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -266,7 +274,8 @@ module.exports.metadata =
     "cordova-plugin-console": "1.0.8-dev",
     "cordova-plugin-actionsheet": "2.3.3",
     "cordova-plugin-camera": "2.4.1",
-    "cordova-plugin-dialogs": "1.3.3"
+    "cordova-plugin-dialogs": "1.3.3",
+    "cordova-plugin-listpicker": "2.2.2"
 };
 // BOTTOM OF METADATA
 });
