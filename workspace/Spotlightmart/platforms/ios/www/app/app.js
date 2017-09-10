@@ -71,6 +71,10 @@ SpotlightmartApp.config(function ($routeProvider, $locationProvider) {
             templateUrl: 'app/views/wallet.html',
             controller: 'walletCtrl'
         })
+        .when('/Search', {
+            templateUrl: 'app/views/search.html',
+            controller: 'searchCtrl'
+        })
         .otherwise({
             redirectTo: '/Home/'
         });
