@@ -1,4 +1,4 @@
-SpotlightmartApp.controller('walletCtrl', function ($scope, CordovaService, $cordovaFile, $location, $rootScope, $uibModal) {
+SpotlightmartApp.controller('walletCtrl', function ($scope, CordovaService, $cordovaFile, $location, $rootScope, $uibModal, $filter) {
     CordovaService.ready.then(function () {
         $scope.oWallet;
         $scope.arrDelete = [];
@@ -62,6 +62,7 @@ SpotlightmartApp.controller('walletCtrl', function ($scope, CordovaService, $cor
                 {
                     console.log("Removing " + i + " credit card : %o", oCard);
                     $scope.oWallet.splice(i);
+                    $scope.arrDelete.splice(i);
                 }
             }
         }
@@ -157,8 +158,23 @@ SpotlightmartApp.controller('walletCtrl', function ($scope, CordovaService, $cor
 
         $scope.DeleteCard = function(card)
         {
-            DeleteCardFromWallet(card);
-            SaveCardToFile();
+            navigator.notification.confirm(
+                "Are you sure you want to delete x" + $filter('limitTo')(card.cardno, -4) + "?",
+                function(buttonIndex)
+                {
+                    if (buttonIndex == 1)
+                    {
+                        DeleteCardFromWallet(card);
+                        SaveCardToFile();
+                    }
+                    else
+                    {
+                        return;
+                    }
+                },
+                'Confirm Delete',
+                ['OK', 'Cancel']
+            );
         }
     });
 });

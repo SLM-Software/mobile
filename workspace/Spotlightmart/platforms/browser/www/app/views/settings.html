@@ -6,10 +6,10 @@
                 <tbody>
                     <tr ng-click="SettingClick()">
                         <td style="padding : 20px; width: 20%">
-                            <img class="pull-left" src="img/40x40_portrait.jpg" />
+                            <img class="pull-left" style="width: 40px; height: 40px;" src="{{ oUser.photoSrc }}" />
                         </td>
                         <td>
-                            <h4 class="pull-left">John Doe</h4>
+                            <h4 class="pull-left">{{ oUser.firstname + " " + oUser.lastname}}</h4>
                         </td>
                         <td>
                             <span class="fa fa-chevron-right pull-right"></span>
@@ -35,7 +35,7 @@
     <br>
     <div class="row">
         <div class="col-xs-12">
-            <button class="btn btn-block btn-primary fa-2x"><span class="fa fa-money"></span></button>
+            <button class="btn btn-block btn-primary fa-2x"  ng-click="WalletClick()"><span class="fa fa-money"></span></button>
         </div>
     </div>
 </div>

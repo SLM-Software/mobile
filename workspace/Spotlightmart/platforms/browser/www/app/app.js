@@ -35,7 +35,7 @@ angular.module('fsCordova', [])
   }]);
 
 
-var SpotlightmartApp = angular.module('SpotlightmartApp', ['fsCordova', 'ngRoute','ui.bootstrap','ngAnimate','ngTouch', 'ngStorage']);
+var SpotlightmartApp = angular.module('SpotlightmartApp', ['fsCordova', 'ngRoute','ui.bootstrap','ngAnimate','ngTouch', 'ngStorage', 'ngCordova.plugins.file']);
 
 SpotlightmartApp.filter('substring', function() {
     return function(str, start, end) {
@@ -67,6 +67,10 @@ SpotlightmartApp.config(function ($routeProvider, $locationProvider) {
             templateUrl: 'app/views/personal.html',
             controller: 'personalCtrl'
         })
+        .when('/Settings/Wallet/', {
+            templateUrl: 'app/views/wallet.html',
+            controller: 'walletCtrl'
+        })
         .otherwise({
             redirectTo: '/Home/'
         });
@@ -93,12 +97,19 @@ SpotlightmartApp.controller('indexCtrl', function ($scope, CordovaService, $loca
                 $("#btnLeftNav").removeClass("hidden");
                 return false;                    
             }
+            else if ($location.path() == '/Settings/Wallet/')
+            {
+                $("#btnLeftNav").removeClass("hidden");
+                return false;
+            }
             else
                 return true;
         }
         
         $scope.leftNavButtonClicked = function() {
             if ($location.path() == '/Settings/Personal/')
+                $location.path('/Settings');
+            else if ($location.path() == '/Settings/Wallet/')
                 $location.path('/Settings');
         }
     });

@@ -29,6 +29,9 @@
         },
         "cordova-plugin-camera": {
             "PACKAGE_NAME": "com.spotlight.retail"
+        },
+        "cordova-plugin-dialogs": {
+            "PACKAGE_NAME": "com.spotlight.retail"
         }
     },
     "dependent_plugins": {

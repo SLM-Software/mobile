@@ -1,55 +1,25 @@
-SpotlightmartApp.controller('personalCtrl', function ($scope, CordovaService, $location, $rootScope, $uibModal) {
+SpotlightmartApp.controller('personalCtrl', function ($scope, CordovaService, $cordovaFile, $location, $rootScope, $uibModal) {
     CordovaService.ready.then(function () {
-        $scope.photoSrc="img/40x40_portrait.jpg";
-        $scope.firstname = "Joe";
-        $scope.lastname = "Blow";
-        $scope.phone = "555-555-5555";
-        $scope.address = "111 My Street";
-        $scope.city = "My City";
-        $scope.state = "CA";
-        $scope.country = "US";
-        $scope.email = "joe.blow@blowme.com";
-        $scope.zip = "99999";
+        $scope.oUser;
         init();
         
-        function init() {};
+        function init() {
+            console.log("Reading user profile from : " + cordova.file.dataDirectory + USER_DATA_FILE);
+            $cordovaFile.readAsText(cordova.file.dataDirectory, USER_DATA_FILE).then(
+                function (data) {
+                    console.log("User data read from file : %o", data);
+                    var oUser = JSON.parse(data);
+                    $scope.user = oUser;
+                },
+                function (error) {
+                    console.log("Failed to read user profile with error : %o", error);
+                    alert("Failed to read user profile, please try again.");
+                }
+            );
+        }
         
         $scope.Edit = function(field) {
-            var value = "";
-            switch (field)
-            {
-                case "Photo":
-                    value = $scope.photoSrc;
-                    break;
-                case "First name":
-                    value = $scope.firstname;
-                    break;
-                case "Last name":
-                    value = $scope.lastname;
-                    break;
-                case "Phone":
-                    value = $scope.phone;
-                    break;
-                case "Address":
-                    value = $scope.address;
-                    break;
-                case "City":
-                    value = $scope.city;
-                    break;
-                case "State":
-                    value = $scope.state;
-                    break;
-                case "Country":
-                    value = $scope.country;
-                    break;
-                case "Email":
-                    value = $scope.email;
-                    break;
-                case "Zip":
-                    value = $scope.zip;
-                    break;
-            }
-            console.log("Editing " + field + " with " + value);
+            console.log("Editing " + field);
             var mdlEdit = $uibModal.open({
                                 animation: true,
                                 templateUrl: 'app/modals/personaldetail.html',
@@ -59,13 +29,15 @@ SpotlightmartApp.controller('personalCtrl', function ($scope, CordovaService, $l
                                     field: function () {
                                         return field;
                                     },
-                                    value: function () {
-                                        return value;
+                                    user: function () {
+                                        return $scope.user;
                                     }
                                 }
                             });
             
             mdlEdit.result.then(function(user) {
+                console.log("Modal close with result : %o", user)
+                $scope.user = user;
             });
         }
     });
