@@ -1,4 +1,4 @@
-SpotlightmartApp.controller('searchCtrl', function ($scope, CordovaService, $location, $rootScope) {
+SpotlightmartApp.controller('searchCtrl', function ($scope, CordovaService, $location, $rootScope, $uibModal) {
     CordovaService.ready.then(function () {
         $scope.arrCategories = PRODUCT_CATGORIES;
         $scope.selectedCategory = "";
@@ -13,8 +13,8 @@ SpotlightmartApp.controller('searchCtrl', function ($scope, CordovaService, $loc
 
         $scope.btnSearchClick = function(selectedCategory)
         {
-            $scope.searchResult = [ { name : "Coke 20oz original flavor", location : "Aisle 4", price : "$3.99"},
-                { name : "Honey Cheerios", location : "Aisle 1", price : "$2.99" } ];
+            $scope.searchResult = [ { upc : "1", name : "Coke 20oz original flavor", location : "Aisle 4", price : "$3.99"},
+                { upc : "2", name : "Honey Cheerios", location : "Aisle 1", price : "$2.99" } ];
         }
 
         $scope.btnCategoryClick = function()
@@ -38,6 +38,25 @@ SpotlightmartApp.controller('searchCtrl', function ($scope, CordovaService, $loc
                     alert("You have cancelled");
                 }
             );
+        }
+
+        $scope.OpenItemDetail = function(upc)
+        {
+            var mdlItemDetail = $uibModal.open({
+                animation: true,
+                templateUrl: 'app/modals/itemdetail.html',
+                controller: 'mdlItemDetailCtrl',
+                backdrop: 'static',
+                resolve: {
+                    upc : function () {
+                        return upc;
+                    }
+                }
+            });
+
+            mdlItemDetail.result.then(function() {
+            });
+
         }
     });
 });
