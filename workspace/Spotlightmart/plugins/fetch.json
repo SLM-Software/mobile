@@ -84,5 +84,26 @@
         },
         "is_top_level": true,
         "variables": {}
+    },
+    "cordova-plugin-safariviewcontroller": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-safariviewcontroller"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-customurlscheme": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-customurlscheme"
+        },
+        "is_top_level": true,
+        "variables": {
+            "URL_SCHEME": "363FEEC8-1A90-4662-B7CE-1AAFC1A60ECD",
+            "ANDROID_SCHEME": "363FEEC8-1A90-4662-B7CE-1AAFC1A60ECD",
+            "ANDROID_HOST": "spotlightmartdev.auth0.com",
+            "ANDROID_PATHPREFIX": "/cordova/363FEEC8-1A90-4662-B7CE-1AAFC1A60ECD/callback"
+        }
     }
 }

@@ -2,15 +2,20 @@ SpotlightmartApp.controller('searchCtrl', function ($scope, CordovaService, $loc
     CordovaService.ready.then(function () {
         $scope.arrCategories = PRODUCT_CATGORIES;
         $scope.selectedCategory = "";
+        $scope.searchResult;
 
         init();
         
         function init() {
             console.log("Loading product categories : %o", $scope.arrCategories);
+            $scope.selectedCategory = "Categories";
         }
 
-        $scope.SearchInCategory = function(selectedCategory)
-        {}
+        $scope.btnSearchClick = function(selectedCategory)
+        {
+            $scope.searchResult = [ { name : "Coke 20oz original flavor", location : "Aisle 4", price : "$3.99"},
+                { name : "Honey Cheerios", location : "Aisle 1", price : "$2.99" } ];
+        }
 
         $scope.btnCategoryClick = function()
         {
@@ -25,7 +30,8 @@ SpotlightmartApp.controller('searchCtrl', function ($scope, CordovaService, $loc
                 dropdownConfig,
                 function(item)
                 {
-                    alert("Item selected : " + item);
+                    $scope.selectedCategory = item;
+                    $scope.$apply();
                 },
                 function()
                 {

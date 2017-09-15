@@ -35,6 +35,13 @@
         },
         "cordova-plugin-listpicker": {
             "PACKAGE_NAME": "com.spotlight.retail"
+        },
+        "cordova-plugin-safariviewcontroller": {
+            "PACKAGE_NAME": "com.spotlight.retail"
+        },
+        "cordova-plugin-customurlscheme": {
+            "URL_SCHEME": "363FEEC8-1A90-4662-B7CE-1AAFC1A60ECD",
+            "PACKAGE_NAME": "com.spotlight.retail"
         }
     },
     "dependent_plugins": {

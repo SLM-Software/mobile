@@ -1,6 +1,6 @@
 SpotlightmartApp.controller('personalCtrl', function ($scope, CordovaService, $cordovaFile, $location, $rootScope, $uibModal) {
     CordovaService.ready.then(function () {
-        $scope.oUser;
+        $scope.user;
         init();
         
         function init() {
@@ -13,7 +13,17 @@ SpotlightmartApp.controller('personalCtrl', function ($scope, CordovaService, $c
                 },
                 function (error) {
                     console.log("Failed to read user profile with error : %o", error);
-                    alert("Failed to read user profile, please try again.");
+                    $scope.user = { firstname : "Joe",
+                                     lastname : "blow",
+                                     phone : "555-555-5555",
+                                     email : "joe.blow@bloeme.com",
+                                     address : "123 My Street",
+                                     city : "My City",
+                                     state : "CA",
+                                     zip : "99999",
+                                     country : "US",
+                                     photoSrc : "~/img/40x40_portrait.jpg"};
+                    console.log("Initing to default user object : %o", $scope.oUser);
                 }
             );
         }

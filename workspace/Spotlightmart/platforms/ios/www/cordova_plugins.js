@@ -261,6 +261,22 @@ module.exports = [
         "clobbers": [
             "window.plugins.listpicker"
         ]
+    },
+    {
+        "id": "cordova-plugin-safariviewcontroller.SafariViewController",
+        "file": "plugins/cordova-plugin-safariviewcontroller/www/SafariViewController.js",
+        "pluginId": "cordova-plugin-safariviewcontroller",
+        "clobbers": [
+            "SafariViewController"
+        ]
+    },
+    {
+        "id": "cordova-plugin-customurlscheme.LaunchMyApp",
+        "file": "plugins/cordova-plugin-customurlscheme/www/ios/LaunchMyApp.js",
+        "pluginId": "cordova-plugin-customurlscheme",
+        "clobbers": [
+            "window.plugins.launchmyapp"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -275,7 +291,9 @@ module.exports.metadata =
     "cordova-plugin-actionsheet": "2.3.3",
     "cordova-plugin-camera": "2.4.1",
     "cordova-plugin-dialogs": "1.3.3",
-    "cordova-plugin-listpicker": "2.2.2"
+    "cordova-plugin-listpicker": "2.2.2",
+    "cordova-plugin-safariviewcontroller": "1.4.7",
+    "cordova-plugin-customurlscheme": "4.3.0"
 };
 // BOTTOM OF METADATA
 });

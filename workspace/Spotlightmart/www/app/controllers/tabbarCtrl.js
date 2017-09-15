@@ -9,9 +9,9 @@ SpotlightmartApp.controller('tabbarCtrl', function ($scope, CordovaService, $loc
         function init()
         {
             console.log("Current path : " + $location.path());
-            if ($window.location.href.indexOf("Home") > -1)
+            if ($location.path().indexOf("Home") > -1)
                 $scope.selectedTab = "Home";
-            else if ($window.location.href.indexOf("Search") > -1)
+            else if ($location.path().indexOf("Search") > -1)
                 $scope.selectedTab = "Search";
             else if ($window.location.href.indexOf("Cart") > -1)
                 $scope.selectedTab = "Cart";
@@ -34,7 +34,7 @@ SpotlightmartApp.controller('tabbarCtrl', function ($scope, CordovaService, $loc
             }
             else if (tabname == 'Search')
             {
-                $scope.selectedTab = 'Home';
+                $scope.selectedTab = 'Search';
                 $location.path("/Search");
             }
             else if (tabname == 'Settings')

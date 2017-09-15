@@ -1,3 +1,4 @@
+
 angular.module('fsCordova', [])
 .service('CordovaService', ['$document', '$q',
   function ($document, $q) {
@@ -10,6 +11,7 @@ angular.module('fsCordova', [])
 
       document.addEventListener('deviceready', function () {
           resolved = true;
+
           d.resolve(window.cordova);
       });
 
@@ -35,7 +37,7 @@ angular.module('fsCordova', [])
   }]);
 
 
-var SpotlightmartApp = angular.module('SpotlightmartApp', ['fsCordova', 'ngRoute','ui.bootstrap','ngAnimate','ngTouch', 'ngStorage', 'ngCordova.plugins.file']);
+var SpotlightmartApp = angular.module('SpotlightmartApp', ['fsCordova', 'ngRoute','ui.bootstrap','ngAnimate','ngTouch', 'ngStorage', 'ngCordova.plugins.file', 'auth0.auth0']);
 
 SpotlightmartApp.filter('substring', function() {
     return function(str, start, end) {
@@ -53,7 +55,7 @@ SpotlightmartApp.filter('replace', function() {
     }
 });
 
-SpotlightmartApp.config(function ($routeProvider, $locationProvider) {
+SpotlightmartApp.config(function ($routeProvider, $locationProvider, angularAuth0Provider) {
     $routeProvider
         .when('/Home/', {
             templateUrl: 'app/views/home.html',
@@ -78,11 +80,18 @@ SpotlightmartApp.config(function ($routeProvider, $locationProvider) {
         .otherwise({
             redirectTo: '/Home/'
         });
+
+    angularAuth0Provider.init({
+        clientID : AUTH0_CLIENTID,
+        domain : AUTH0_DOMAIN
+    });
 });
 
-SpotlightmartApp.controller('indexCtrl', function ($scope, CordovaService, $location, $rootScope, $uibModal) {
+SpotlightmartApp.controller('indexCtrl', function ($scope, CordovaService, $location, $rootScope, $uibModal, angularAuth0) {
     CordovaService.ready.then(function () {
+        $scope.auth0 = angularAuth0;
         $scope.Login = function () {
+            /*
             var mdlLogin = $uibModal.open({
                                 animation: true,
                                 templateUrl: 'app/modals/login.html',
@@ -91,6 +100,15 @@ SpotlightmartApp.controller('indexCtrl', function ($scope, CordovaService, $loca
                             });
             
             mdlLogin.result.then(function(user) {
+            });
+            */
+            $scope.auth0.login({
+                connection: 'db-conn',
+                username : 'daniel@spotlightmart.com',
+                password : '23456Abc'
+            }, function (err, result) {
+                console.log("Error when trying to login : %o", err);
+                console.log("Error result : %o", result);
             });
         };
         
