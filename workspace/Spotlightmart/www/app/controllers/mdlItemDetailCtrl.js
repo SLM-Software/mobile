@@ -1,6 +1,9 @@
-SpotlightmartApp.controller('mdlItemDetailCtrl', function ($scope, CordovaService, $cordovaFile, $modalInstance, $uibModal, upc) {
+SpotlightmartApp.controller('mdlItemDetailCtrl', function ($scope, CordovaService, $cordovaFile, $modalInstance, $uibModal, upc, blnShowNavigation, blnShowAddShoppingList) {
     CordovaService.ready.then(function () {
         $scope.upc = upc;
+        $scope.blnShowNavigation = blnShowNavigation;
+        $scope.blnShowAddShoppingList = blnShowAddShoppingList;
+
         init();
 
         function init() {

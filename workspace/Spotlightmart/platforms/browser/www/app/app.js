@@ -73,6 +73,10 @@ SpotlightmartApp.config(function ($routeProvider, $locationProvider, angularAuth
             templateUrl: 'app/views/wallet.html',
             controller: 'walletCtrl'
         })
+        .wheb('/Settings/ShoppingList/', {
+            templateUrl: 'app/views/shoppinglist.html',
+            controller: 'shoppinglistCtrl'
+        })
         .when('/Search', {
             templateUrl: 'app/views/search.html',
             controller: 'searchCtrl'

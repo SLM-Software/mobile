@@ -60,6 +60,12 @@ SpotlightmartApp.controller('searchCtrl', function ($scope, CordovaService, $loc
                 resolve: {
                     upc : function () {
                         return upc;
+                    },
+                    blnShowNavigation : function () {
+                        return true;
+                    },
+                    blnShowAddShoppingList : function () {
+                        return true;
                     }
                 }
             });

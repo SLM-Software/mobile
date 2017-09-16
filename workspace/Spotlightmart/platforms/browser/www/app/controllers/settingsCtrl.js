@@ -25,5 +25,9 @@ SpotlightmartApp.controller('settingsCtrl', function ($scope, CordovaService, $c
         $scope.WalletClick = function() {
             $location.path('/Settings/Wallet');
         }
+
+        $scope.ShoppingListClick = function() {
+            $location.path("/Settings/ShoppingList");
+        }
     });
 });

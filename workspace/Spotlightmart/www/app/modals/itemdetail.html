@@ -28,6 +28,6 @@
 </div>
 <div class="modal-footer">
     <!-- SUBMIT -->
-    <a href="#" class="btn btn-default btn-block" ng-click="ShowNavigation(upc)">Show Navigation</a>
-    <a href="#" class="btn btn-default btn-block" ng-click="AddToShoppingList(upc)">Add To Shopping List</a>
+    <a href="#" class="btn btn-default btn-block" ng-show="blnShowNavigation" ng-click="ShowNavigation(upc)">Show Navigation</a>
+    <a href="#" class="btn btn-default btn-block" ng-show="blnShowAddShoppingList" ng-click="AddToShoppingList(upc)">Add To Shopping List</a>
 </div>

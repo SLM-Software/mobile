@@ -1,0 +1,22 @@
+<div class="container">
+    <h4>Shopping List</h4>
+    <hr>
+    <div class="well" ng-repeat="item in shoppingList track by $index">
+        <div class="row" ng-click="OpenItemDetail(item.upc)">
+            <div class="col-xs-3">
+                <img class="media-object" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+PGRlZnMvPjxyZWN0IHdpZHRoPSI2NCIgaGVpZ2h0PSI2NCIgZmlsbD0iI0VFRUVFRSIvPjxnPjx0ZXh0IHg9IjEzLjQ2MDkzNzUiIHk9IjMyIiBzdHlsZT0iZmlsbDojQUFBQUFBO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1mYW1pbHk6QXJpYWwsIEhlbHZldGljYSwgT3BlbiBTYW5zLCBzYW5zLXNlcmlmLCBtb25vc3BhY2U7Zm9udC1zaXplOjEwcHQ7ZG9taW5hbnQtYmFzZWxpbmU6Y2VudHJhbCI+NjR4NjQ8L3RleHQ+PC9nPjwvc3ZnPg==" alt="...">
+            </div>
+            <div class="col-xs-9">
+                <h4>{{ item.name }}</h4>
+                <div class="row">
+                    <div class="col-xs-6">
+                        {{ item.location }}
+                    </div>
+                    <div class="col-xs-6 pull-right">
+                        {{ item.price }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
