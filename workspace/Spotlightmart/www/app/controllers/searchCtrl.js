@@ -13,6 +13,15 @@ SpotlightmartApp.controller('searchCtrl', function ($scope, CordovaService, $loc
 
         $scope.btnSearchClick = function(selectedCategory)
         {
+            if ($scope.selectedCategory == "Categories")
+            {
+                navigator.notification.alert(
+                    "Please select a category first to continue",
+                    function () {},
+                    "Error",
+                    "OK");
+                return;
+            }
             $scope.searchResult = [ { upc : "1", name : "Coke 20oz original flavor", location : "Aisle 4", price : "$3.99"},
                 { upc : "2", name : "Honey Cheerios", location : "Aisle 1", price : "$2.99" } ];
         }
@@ -42,6 +51,7 @@ SpotlightmartApp.controller('searchCtrl', function ($scope, CordovaService, $loc
 
         $scope.OpenItemDetail = function(upc)
         {
+            console.log("Viewing upc : " + upc);
             var mdlItemDetail = $uibModal.open({
                 animation: true,
                 templateUrl: 'app/modals/itemdetail.html',

@@ -102,7 +102,11 @@ SpotlightmartApp.controller('indexCtrl', function ($scope, CordovaService, $loca
             mdlLogin.result.then(function(user) {
             });
             */
-            $scope.auth0.login(AUTH0_OPTIONS, function (err, result) {
+            $scope.auth0.login({
+                connection: 'db-conn',
+                username : 'daniel@spotlightmart.com',
+                password : '23456Abc'
+            }, function (err, result) {
                 console.log("Error when trying to login : %o", err);
                 console.log("Error result : %o", result);
             });
