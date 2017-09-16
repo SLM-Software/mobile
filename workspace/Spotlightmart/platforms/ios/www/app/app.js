@@ -77,6 +77,10 @@ SpotlightmartApp.config(function ($routeProvider, $locationProvider, angularAuth
             templateUrl: 'app/views/shoppinglist.html',
             controller: 'shoppinglistCtrl'
         })
+        .when('/Settings/Mailbox/', {
+            templateUrl: 'app/views/mailbox.html',
+            controller: 'mailboxCtrl'
+        })
         .when('/Search', {
             templateUrl: 'app/views/search.html',
             controller: 'searchCtrl'
@@ -128,6 +132,16 @@ SpotlightmartApp.controller('indexCtrl', function ($scope, CordovaService, $loca
                 $("#btnLeftNav").removeClass("hidden");
                 return false;
             }
+            else if ($location.path() == '/Settings/ShoppingList/')
+            {
+                $("#btnLeftNav").removeClass("hidden");
+                return false;
+            }
+            else if ($location.path() == '/Settings/Mailbox/')
+            {
+                $("#btnLeftNav").removeClass("hidden");
+                return false;
+            }
             else
                 return true;
         }
@@ -136,6 +150,10 @@ SpotlightmartApp.controller('indexCtrl', function ($scope, CordovaService, $loca
             if ($location.path() == '/Settings/Personal/')
                 $location.path('/Settings');
             else if ($location.path() == '/Settings/Wallet/')
+                $location.path('/Settings');
+            else if ($location.path() == '/Settings/ShoppingList/')
+                $location.path('/Settings');
+            else if ($location.path() == '/Settings/Mailbox/')
                 $location.path('/Settings');
         }
     });

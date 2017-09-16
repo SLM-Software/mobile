@@ -1,6 +1,8 @@
 <div class="container">
-    <button class="btn btn-success btn-block" ng-click="AddCard()"><i class="fa fa-plus-circle">Add New Card</i></button>
+    <h4>Payment Cards</h4>
     <hr>
+    <button class="btn btn-success btn-block" ng-click="AddCard()"><i class="fa fa-plus-circle">Add New Card</i></button>
+    <br>
     <ul class="list-group">
         <li class="list-group-item clearfix" style="width:100%" ng-repeat="card in oWallet track by card.cardno"
             ng-swipe-left="ToggleDeleteButton(card, true)" ng-swipe-right="ToggleDeleteButton(card, false)" >
