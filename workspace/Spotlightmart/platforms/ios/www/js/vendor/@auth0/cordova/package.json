@@ -1,0 +1,121 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "@auth0/cordova",
+        "scope": "@auth0",
+        "escapedName": "@auth0%2fcordova",
+        "name": "@auth0/cordova",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "/Users/fcheu00/SourceTree/Spotlightmart/workspace/Spotlightmart"
+    ]
+  ],
+  "_from": "@auth0/cordova@latest",
+  "_id": "@auth0/cordova@0.2.0",
+  "_inCache": true,
+  "_location": "/@auth0/cordova",
+  "_nodeVersion": "6.7.0",
+  "_npmOperationalInternal": {
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/cordova-0.2.0.tgz_1499477607225_0.3247931075748056"
+  },
+  "_npmUser": {
+    "name": "hzalaz",
+    "email": "hernan@auth0.com"
+  },
+  "_npmVersion": "3.10.3",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "@auth0/cordova",
+    "scope": "@auth0",
+    "escapedName": "@auth0%2fcordova",
+    "name": "@auth0/cordova",
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/@auth0/cordova/-/cordova-0.2.0.tgz",
+  "_shasum": "4c3a6f998ee532b6f8e3e1fe980305cc713c1faa",
+  "_shrinkwrap": null,
+  "_spec": "@auth0/cordova",
+  "_where": "/Users/fcheu00/SourceTree/Spotlightmart/workspace/Spotlightmart",
+  "author": {
+    "name": "Auth0"
+  },
+  "bugs": {
+    "url": "https://github.com/auth0/auth0-cordova/issues"
+  },
+  "dependencies": {
+    "auth0-js": "^8.5.0",
+    "url-parse": "^1.1.8"
+  },
+  "description": "Auth0 integration for Cordova applications",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "codecov": "^2.1.0",
+    "eslint": "3.12.2",
+    "eslint-config-auth0-base": "6.0.0",
+    "eslint-plugin-compat": "^1.0.0",
+    "eslint-plugin-import": "1.16.0",
+    "istanbul": "^0.4.5",
+    "jsdoc": "^3.4.3",
+    "jsdoc-to-markdown": "^2.0.1",
+    "minami": "^1.2.3",
+    "mocha": "^3.3.0",
+    "mocha-junit-reporter": "^1.13.0",
+    "mocha-multi": "^0.11.0",
+    "webpack": "^2.4.1"
+  },
+  "directories": {},
+  "dist": {
+    "shasum": "4c3a6f998ee532b6f8e3e1fe980305cc713c1faa",
+    "tarball": "https://registry.npmjs.org/@auth0/cordova/-/cordova-0.2.0.tgz"
+  },
+  "engine": {
+    "node": ">=6.9.0"
+  },
+  "gitHead": "62a2c3631a685975251236d9440cf29b2a208ab6",
+  "homepage": "https://github.com/auth0/auth0-cordova#readme",
+  "keywords": [
+    "auth0",
+    "cordova",
+    "phonegap",
+    "hybrid",
+    "ionic",
+    "oauth",
+    "auth",
+    "pkce",
+    "mobile"
+  ],
+  "license": "MIT",
+  "main": "src/index.js",
+  "maintainers": [
+    {
+      "name": "hzalaz",
+      "email": "hernan@auth0.com"
+    }
+  ],
+  "name": "@auth0/cordova",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/auth0/auth0-cordova.git"
+  },
+  "scripts": {
+    "build": "webpack -p --config webpack.config.js",
+    "ci:coverage": "codecov",
+    "ci:test": "istanbul cover _mocha --report lcovonly -R test/**/* -- -R mocha-multi --reporter-options spec=-,mocha-junit-reporter=-",
+    "jsdocs": "LIB_VERSION=$(node -pe \"require('./package.json').version\");jsdoc --configure .jsdoc.json --verbose;rm -Rf docs/;mv out/@auth0/cordova/$LIB_VERSION/ docs",
+    "lint": "eslint ./src",
+    "test": "mocha test/**/*.tests.js"
+  },
+  "version": "0.2.0"
+}

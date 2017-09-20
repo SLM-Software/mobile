@@ -1,0 +1,34 @@
+<div class="container">
+    <div class="input-group">
+        <input type="text" placeholder="Search..." class="form-control" ng-model="searchText">
+        <span class="input-group-btn">
+            <button class="btn btn-default" ng-click="btnSearchClick()"><i class="fa fa-search"></i></button>
+        </span>
+    </div>
+    <div class="form-group">
+        <button class="btn btn-default btn-block form-control clearfix" ng-click="btnCategoryClick()">
+            <span class="fa fa-file-text pull-left" style="padding-left: 5px; padding-top: 2px;">&nbsp;{{ selectedCategory }} </span><span class="fa fa-caret-down pull-right" style="padding-right: 5px; padding-top: 2px;"></span>
+        </button>
+    </div>
+    <br>
+    <div id="divResult">
+        <div class="well" ng-repeat="item in searchResult track by $index">
+            <div class="row" ng-click="OpenItemDetail(item.upc)">
+                <div class="col-xs-3">
+                    <img class="media-object" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+PGRlZnMvPjxyZWN0IHdpZHRoPSI2NCIgaGVpZ2h0PSI2NCIgZmlsbD0iI0VFRUVFRSIvPjxnPjx0ZXh0IHg9IjEzLjQ2MDkzNzUiIHk9IjMyIiBzdHlsZT0iZmlsbDojQUFBQUFBO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1mYW1pbHk6QXJpYWwsIEhlbHZldGljYSwgT3BlbiBTYW5zLCBzYW5zLXNlcmlmLCBtb25vc3BhY2U7Zm9udC1zaXplOjEwcHQ7ZG9taW5hbnQtYmFzZWxpbmU6Y2VudHJhbCI+NjR4NjQ8L3RleHQ+PC9nPjwvc3ZnPg==" alt="...">
+                </div>
+                <div class="col-xs-9">
+                    <h4>{{ item.name }}</h4>
+                    <div class="row">
+                        <div class="col-xs-6">
+                            {{ item.location }}
+                        </div>
+                        <div class="col-xs-6 pull-right">
+                            {{ item.price }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

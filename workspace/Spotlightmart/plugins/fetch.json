@@ -105,5 +105,13 @@
             "ANDROID_HOST": "spotlightmartdev.auth0.com",
             "ANDROID_PATHPREFIX": "/cordova/363FEEC8-1A90-4662-B7CE-1AAFC1A60ECD/callback"
         }
+    },
+    "com.googlemaps.ios": {
+        "source": {
+            "type": "registry",
+            "id": "https://github.com/mapsplugin/cordova-plugin-googlemaps-sdk"
+        },
+        "is_top_level": false,
+        "variables": {}
     }
 }

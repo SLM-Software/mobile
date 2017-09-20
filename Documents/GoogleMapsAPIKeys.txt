@@ -1,0 +1,13 @@
+Android API Key :
+AIzaSyAyqjk5TAYqMt1CgiJYo6zRFurfF7BB7Jc
+iOS API Key :
+dIzaSyCeQyXmmirYFKfVmEwsac23s74BjQ0OMhw
+Web API Key : 
+AIzaSyAAp5y1TpHgDlhGGRvyZ-pVaj2qBhuKSOw
+cordova plugin add cordova-plugin-googlemaps \
+     --variable API_KEY_FOR_ANDROID="AIzaSyAyqjk5TAYqMt1CgiJYo6zRFurfF7BB7Jc" \
+     --variable API_KEY_FOR_IOS="dIzaSyCeQyXmmirYFKfVmEwsac23s74BjQ0OMhw" \
+     --variable LOCATION_WHEN_IN_USE_DESCRIPTION="Do you want to enable location services while the app is in use?" \
+     --variable LOCATION_ALWAYS_USAGE_DESCRIPTION="Do you want to enable locatin services all the time?"
+
+

@@ -9,7 +9,6 @@
 		0207DA581B56EA530066E2B4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0207DA571B56EA530066E2B4 /* Images.xcassets */; };
 		0A5632D0B70441C2909166B8 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADE1E7005F924AAEA550343F /* Bolts.framework */; };
 		1141B47E27404A0FAEFE61A6 /* CDVLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = E15D7617EAB1421DA2D52C38 /* CDVLogger.m */; };
-		159C9C0C37E54817A486890A /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23E1D603305E4F3E85C163FE /* CoreLocation.framework */; };
 		1D3623260D0F684500981E51 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* AppDelegate.m */; };
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		301BF552109A68D80062928A /* libCordova.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 301BF535109A57CC0062928A /* libCordova.a */; };
@@ -33,7 +32,6 @@
 		DDF5E39D17194ADE81711258 /* CDVLocalFilesystem.m in Sources */ = {isa = PBXBuildFile; fileRef = F21A9DF9DEC341698ED2F2FC /* CDVLocalFilesystem.m */; };
 		E19659C81DCC41679FDF5862 /* CDVNotification.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8E70DA7657664914ACD450EF /* CDVNotification.bundle */; };
 		E96B79021E3E4834A50E468C /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6BC2F2A41F2411693DC96BA /* FBSDKCoreKit.framework */; };
-		F003C33F1771419D8C55A638 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAD0365988B44C8B84C5A19C /* ImageIO.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		4562E35D93C9436A814044EE /* SafariViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37B1D85E6CED4D39ABA5DE66 /* SafariViewController.m */; };
 		D592BFC87C60458697519B2D /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3385B10DDAA469BAA5A22E0 /* SafariServices.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
@@ -73,7 +71,6 @@
 		1D3623250D0F684500981E51 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		1D6058910D05DD3D006BFB54 /* Spotlightmart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Spotlightmart.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F6790C7B9DA492091766B99 /* CDVCamera.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = CDVCamera.h; path = "cordova-plugin-camera/CDVCamera.h"; sourceTree = "<group>"; };
-		23E1D603305E4F3E85C163FE /* CoreLocation.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2CEB94A04C7341B18B98640A /* CDVFile.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = CDVFile.h; path = "cordova-plugin-file/CDVFile.h"; sourceTree = "<group>"; };
 		301BF52D109A57CC0062928A /* CordovaLib/CordovaLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = CordovaLib/CordovaLib.xcodeproj; sourceTree = "<group>"; };
@@ -102,7 +99,6 @@
 		A6BC2F2A41F2411693DC96BA /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = "Spotlightmart/Plugins/cordova-plugin-facebook4/FBSDKCoreKit.framework"; sourceTree = "<group>"; };
 		A8DEC1981F514BE4008A3B4A /* Spotlightmart.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = Spotlightmart.entitlements; path = Spotlightmart/Spotlightmart.entitlements; sourceTree = "<group>"; };
 		ADE1E7005F924AAEA550343F /* Bolts.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = "Spotlightmart/Plugins/cordova-plugin-facebook4/Bolts.framework"; sourceTree = "<group>"; };
-		BAD0365988B44C8B84C5A19C /* ImageIO.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		BDEF254966A6407F872D8016 /* ListPicker.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = ListPicker.h; path = "cordova-plugin-listpicker/ListPicker.h"; sourceTree = "<group>"; };
 		BF52951DBE5B48F1A816EFD6 /* AudioToolbox.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		C780C7CB385E498E99918CA7 /* FacebookConnectPlugin.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = FacebookConnectPlugin.h; path = "cordova-plugin-facebook4/FacebookConnectPlugin.h"; sourceTree = "<group>"; };
@@ -133,8 +129,6 @@
 				E96B79021E3E4834A50E468C /* FBSDKCoreKit.framework in Frameworks */,
 				9E496661C05A4347B5120CFE /* FBSDKLoginKit.framework in Frameworks */,
 				9FB563034CB04D9DB68E62D2 /* FBSDKShareKit.framework in Frameworks */,
-				F003C33F1771419D8C55A638 /* ImageIO.framework in Frameworks */,
-				159C9C0C37E54817A486890A /* CoreLocation.framework in Frameworks */,
 				70C33CE497694C2F980C7057 /* AVFoundation.framework in Frameworks */,
 				BEC82100C5CB47C7A8BEF16A /* AudioToolbox.framework in Frameworks */,
 				D592BFC87C60458697519B2D /* SafariServices.framework in Frameworks */,
@@ -214,8 +208,6 @@
 				A6BC2F2A41F2411693DC96BA /* FBSDKCoreKit.framework */,
 				47466DF6814941329996224E /* FBSDKLoginKit.framework */,
 				D58261151F3B4F3DB79C0AD3 /* FBSDKShareKit.framework */,
-				BAD0365988B44C8B84C5A19C /* ImageIO.framework */,
-				23E1D603305E4F3E85C163FE /* CoreLocation.framework */,
 				7E6643725E1A4B3DA5CBBFC7 /* AVFoundation.framework */,
 				BF52951DBE5B48F1A816EFD6 /* AudioToolbox.framework */,
 				D3385B10DDAA469BAA5A22E0 /* SafariServices.framework */,
@@ -452,6 +444,12 @@
 					"\"Spotlightmart/Plugins/cordova-plugin-facebook4\"",
 					"\"Spotlightmart/Plugins/cordova-plugin-facebook4\"",
 					"\"Spotlightmart/Plugins/cordova-plugin-facebook4\"",
+					"\"Spotlightmart/Plugins/com.googlemaps.ios\"",
+					"\"Spotlightmart/Plugins/com.googlemaps.ios\"",
+					"\"Spotlightmart/Plugins/com.googlemaps.ios\"",
+					"\"Spotlightmart/Plugins/com.googlemaps.ios\"",
+					"\"Spotlightmart/Plugins/com.googlemaps.ios\"",
+					"\"Spotlightmart/Plugins/com.googlemaps.ios\"",
 				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -488,6 +486,12 @@
 					"\"Spotlightmart/Plugins/cordova-plugin-facebook4\"",
 					"\"Spotlightmart/Plugins/cordova-plugin-facebook4\"",
 					"\"Spotlightmart/Plugins/cordova-plugin-facebook4\"",
+					"\"Spotlightmart/Plugins/com.googlemaps.ios\"",
+					"\"Spotlightmart/Plugins/com.googlemaps.ios\"",
+					"\"Spotlightmart/Plugins/com.googlemaps.ios\"",
+					"\"Spotlightmart/Plugins/com.googlemaps.ios\"",
+					"\"Spotlightmart/Plugins/com.googlemaps.ios\"",
+					"\"Spotlightmart/Plugins/com.googlemaps.ios\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Spotlightmart/Spotlightmart-Prefix.pch";

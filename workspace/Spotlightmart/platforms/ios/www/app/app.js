@@ -37,7 +37,7 @@ angular.module('fsCordova', [])
   }]);
 
 
-var SpotlightmartApp = angular.module('SpotlightmartApp', ['fsCordova', 'ngRoute','ui.bootstrap','ngAnimate','ngTouch', 'ngStorage', 'ngCordova.plugins.file', 'auth0.auth0']);
+var SpotlightmartApp = angular.module('SpotlightmartApp', ['fsCordova', 'ngRoute','ui.bootstrap','ngAnimate','ngTouch', 'ngStorage', 'ngCordova.plugins.file', 'auth0.auth0','ngMap']);
 
 SpotlightmartApp.filter('substring', function() {
     return function(str, start, end) {
@@ -84,6 +84,10 @@ SpotlightmartApp.config(function ($routeProvider, $locationProvider, angularAuth
         .when('/Search', {
             templateUrl: 'app/views/search.html',
             controller: 'searchCtrl'
+        })
+        .when('/StoreLocator', {
+            templateUrl: 'app/views/storelocator.html',
+            controller: 'storeLocatorCtrl'
         })
         .otherwise({
             redirectTo: '/Home/'

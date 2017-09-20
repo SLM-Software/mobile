@@ -128,7 +128,9 @@
                             "xml": "<string />",
                             "count": 1
                         }
-                    ]
+                    ],
+                    "Google Maps API Key": [],
+                    "NSLocationAlwaysUsageDescription": []
                 }
             }
         }

@@ -1,0 +1,33 @@
+<div class="modal-header">
+    <div class="form-group">
+        <button type="button" class="close" ng-click="cancel()">&times;</button>
+        <h3>Product Detail</h3>
+    </div>
+</div>
+<div class="modal-body">
+    <div class="row">
+        <div class="col-xs-3">
+            <img src="img/Coke_20oz.png">
+        </div>
+        <div class="col-xs-9">
+            <h4>Coke 20oz original flavor</h4>
+            <p>Coca-Cola is the most popular soft drink in history, as well as the best-known brand in the world.</p>
+            <p><i>UPC {{ upc }}</i></p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <h4>INGREDIENTS</h4>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            Carbonated Water, High Fructose Corn Syrup, Caramel Color, Phosphoric Acid, Natural Flavors, Caffeine.
+        </div>
+    </div>
+</div>
+<div class="modal-footer">
+    <!-- SUBMIT -->
+    <a href="#" class="btn btn-default btn-block" ng-show="blnShowNavigation" ng-click="ShowNavigation(upc)">Show Navigation</a>
+    <a href="#" class="btn btn-default btn-block" ng-show="blnShowAddShoppingList" ng-click="AddToShoppingList(upc)">Add To Shopping List</a>
+</div>

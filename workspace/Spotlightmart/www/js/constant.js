@@ -1,5 +1,6 @@
 var FB_APP_ID = "1915895988671514";
 var FB_APP_NAME = "Spotlightmart";
+var GOOGLE_MAP_JS_API_KEY = "AIzaSyAAp5y1TpHgDlhGGRvyZ-pVaj2qBhuKSOw";
 var FB_APP_PERMISSION = ["public_profile"];
 var AUTH0_DOMAIN = "spotlightmartdev.auth0.com";
 var AUTH0_CLIENTID = "2XHm_I2RPZ3-lpUUi2gBODI_4KvjtaYP";

@@ -1,4 +1,4 @@
-SpotlightmartApp.controller('homeCtrl', function ($scope, CordovaService, $location, $rootScope) {
+SpotlightmartApp.controller('homeCtrl', function ($scope, CordovaService, $location, $rootScope, $uibModal) {
     CordovaService.ready.then(function () {
         // generate 40 cards
         $scope.currentIndex = 0;
@@ -22,8 +22,27 @@ SpotlightmartApp.controller('homeCtrl', function ($scope, CordovaService, $locat
             $scope.direction = 'right';
             $scope.currentIndex = ($scope.currentIndex > 0) ? --$scope.currentIndex : $scope.slides.length - 1;
         };    
+
         $scope.isCurrentSlideIndex = function (index) {
             return $scope.currentIndex === index;
         };
+
+        $scope.ShowStoreLocatorModal = function () {
+            $location.path("/StoreLocator");
+/*
+            var mdlStoreLocator = $uibModal.open({
+                animation: true,
+                templateUrl: 'app/modals/storelocator.html',
+                controller: 'mdlStoreLocatorCtrl',
+                backdrop: 'static',
+                resolve: {
+                }
+            });
+
+            mdlStoreLocator.result.then(function() {
+            });
+*/
+        }
+
     });
 });

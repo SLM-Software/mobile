@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="0.001" tests="5" failures="0">
+  <testsuite name="Root Suite" timestamp="2017-05-08T02:24:50" tests="0" failures="0" time="0">
+  </testsuite>
+  <testsuite name="crypto" timestamp="2017-05-08T02:24:50" tests="0" file="/Users/hernan/Projects/Auth0/auth0-cordova/test/crypto.tests.js" failures="0" time="0">
+  </testsuite>
+  <testsuite name="generateProofKey" timestamp="2017-05-08T02:24:50" tests="3" file="/Users/hernan/Projects/Auth0/auth0-cordova/test/crypto.tests.js" failures="0" time="0.001">
+    <testcase name="crypto generateProofKey should generate verifier" time="0" classname="should generate verifier">
+    </testcase>
+    <testcase name="crypto generateProofKey should generate challenge" time="0" classname="should generate challenge">
+    </testcase>
+    <testcase name="crypto generateProofKey should always generate new proof keys" time="0.001" classname="should always generate new proof keys">
+    </testcase>
+  </testsuite>
+  <testsuite name="generateState" timestamp="2017-05-08T02:24:50" tests="2" file="/Users/hernan/Projects/Auth0/auth0-cordova/test/crypto.tests.js" failures="0" time="0">
+    <testcase name="crypto generateState should generate state" time="0" classname="should generate state">
+    </testcase>
+    <testcase name="crypto generateState should generate distinct states" time="0" classname="should generate distinct states">
+    </testcase>
+  </testsuite>
+</testsuites>
