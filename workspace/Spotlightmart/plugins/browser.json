@@ -1,0 +1,16 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-customurlscheme": {
+            "URL_SCHEME": "com.spotlight.retail",
+            "PACKAGE_NAME": "com.spotlight.retail"
+        }
+    },
+    "dependent_plugins": {}
+}
