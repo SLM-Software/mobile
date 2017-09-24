@@ -6,6 +6,7 @@ SpotlightmartApp.controller('storeLocatorCtrl', function ($scope, CordovaService
             { "name" : 'Pier 39', "address" : "Somewhere near the pier", "latitude" : 37.8096506, "longitude" :  -122.410249 }
         ];
         $scope.currentPostition;
+        $scope.map;
 
         init();
 
@@ -34,6 +35,7 @@ SpotlightmartApp.controller('storeLocatorCtrl', function ($scope, CordovaService
         function initMap(coords)
         {
             NgMap.getMap().then(function(map) {
+                $scope.map = map;
                 map.setCenter(new google.maps.LatLng(coords.latitude, coords.longitude));
                 map.setZoom(12);
                 map.setOptions({ disableDefaultUI : true });
@@ -89,6 +91,12 @@ SpotlightmartApp.controller('storeLocatorCtrl', function ($scope, CordovaService
                 })(marker, i));
             }
             map.fitBounds(bounds);
+        }
+
+        $scope.CenterMap = function()
+        {
+            console.log("Centering map");
+            $scope.map.setCenter(new google.maps.LatLng($scope.currentPosition.latitude, $scope.currentPosition.longitude));
         }
     });
 });

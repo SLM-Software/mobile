@@ -29,3 +29,4 @@ a[href^="https://maps.google.com/maps"]{display:none !important}
 .gmnoprint div {
     background:none !important;
 }
+.gm-style-iw + div {display: none;}
