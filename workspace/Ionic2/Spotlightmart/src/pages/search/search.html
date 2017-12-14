@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>
+      Search
+    </ion-title>
+  </ion-navbar>
+  </ion-header>
+  
+
+<ion-content padding>
+  <ion-row>
+    <ion-item>
+      <ion-input type="text" placeholder="I'm shopping for..."></ion-input>
+      <ion-icon item-right name="search" (click)="btnSearchClicked()"></ion-icon>
+    </ion-item>
+  </ion-row>
+  <ion-row>
+    <ion-item>
+      <ion-label>Categories</ion-label>
+      <ion-select [(ngModel)]="selectedCategories" multiple="true">
+        <ion-option *ngFor="let category of categories" value="{{ category.id }}">{{ category.name }}</ion-option>
+      </ion-select>
+    </ion-item>
+  </ion-row>
+</ion-content>

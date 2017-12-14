@@ -1,0 +1,38 @@
+<ion-header>
+    <ion-navbar color="primary">
+      <ion-title>
+        Settings
+      </ion-title>
+    </ion-navbar>
+</ion-header>
+    
+<ion-content padding>
+  <ion-row>
+    <ion-slides pager="false" *ngIf="oAuth.isAuthenticated()">
+      <ion-slide>
+        <ion-card>
+          <ion-item>
+            <ion-row>
+              <ion-col col-8>
+                <h2>{{ oAuth.user.name }}</h2>
+                <p>{{ oAuth.user.email }}</p>
+              </ion-col>
+              <ion-col col-4 >
+                <img src="{{ oAuth.user.picture }}" style="width:50px; height:50px; position: absolute; right:0px;"/>
+              </ion-col>
+            </ion-row>
+          </ion-item>
+        </ion-card>
+      </ion-slide>
+    </ion-slides>
+  </ion-row>
+  <hr>
+  <ion-row>
+    <button ion-button block><ion-icon name="briefcase-outline"></ion-icon>&nbsp;My Orders</button>
+    <button ion-button block><ion-icon name="heart-outline"></ion-icon>&nbsp;My Favourites</button>
+    <button ion-button block><ion-icon name="card"></ion-icon>&nbsp;My Wallet</button>
+    <button ion-button block><ion-icon name="share"></ion-icon>&nbsp;Invite Friends</button>
+    <button ion-button block><ion-icon name="call"></ion-icon>&nbsp;Customer Service</button>
+    <button ion-button block><ion-icon name="microphone"></ion-icon>&nbsp;App Suggestion</button>
+  </ion-row>
+</ion-content>  
