@@ -1,6 +1,6 @@
 // Library include
 import { Component } from '@angular/core';
-import { Platform } from 'ionic-angular';
+import { Platform, ModalController } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { AuthService } from '../services/auth.service';
@@ -21,13 +21,20 @@ import Auth0Cordova from '@auth0/cordova';
 export class Spotlightmart {
   rootPage:any = TabsPage;
 
-  constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, auth : AuthService) {
+  constructor(platform: Platform, modalCtrl : ModalController, statusBar: StatusBar, splashScreen: SplashScreen, auth : AuthService) {
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
       statusBar.styleDefault();
       splashScreen.hide();
 
+      // Check if user is authenticated, if not present the login modal
+      if (!auth.isAuthenticated())
+      {
+        let mdlLogin = modalCtrl.create(LoginPage);
+        mdlLogin.present();
+      }
+      
       // This function is part of "Set Up Auth0-Cordova"
       (<any>window).handleOpenURL = (url) => {
         (<any>window).setTimeout(function() {
