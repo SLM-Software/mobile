@@ -11,6 +11,7 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { LoginPage } from '../pages/login/login';
 import { SettingsPage } from '../pages/settings/settings';
 import { SearchPage } from '../pages/search/search';
+import { ShoppingcartPage } from '../pages/shoppingcart/shoppingcart';
 
 // This import is part of "Set Up Auth0-Cordova"
 import Auth0Cordova from '@auth0/cordova';
@@ -34,7 +35,7 @@ export class Spotlightmart {
         let mdlLogin = modalCtrl.create(LoginPage);
         mdlLogin.present();
       }
-      
+
       // This function is part of "Set Up Auth0-Cordova"
       (<any>window).handleOpenURL = (url) => {
         (<any>window).setTimeout(function() {

@@ -4,6 +4,7 @@ import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
+import { FormsModule } from '@angular/forms';
 
 // This import is part of "Creating an Authentication Service"
 import { AuthService } from '../services/auth.service';
@@ -15,7 +16,7 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { LoginPage } from '../pages/login/login';
 import { SettingsPage } from '../pages/settings/settings';
 import { SearchPage } from '../pages/search/search';
-import { FormsModule } from '@angular/forms';
+import { ShoppingcartPage } from '../pages/shoppingcart/shoppingcart';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { FormsModule } from '@angular/forms';
     TabsPage,
     LoginPage,
     SettingsPage,
-    SearchPage
+    SearchPage,
+    ShoppingcartPage
   ],
   imports: [
     BrowserModule, FormsModule,
@@ -37,7 +39,8 @@ import { FormsModule } from '@angular/forms';
     TabsPage,
     LoginPage,
     SettingsPage,
-    SearchPage
+    SearchPage,
+    ShoppingcartPage
   ],
   providers: [
     StatusBar,

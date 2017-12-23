@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>
+      Shopping Cart
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <ion-row>
+  <ion-icon name="cart" style="font-size: 20px;"></ion-icon>
+  <ion-badge item-end>{{ items.length }}</ion-badge>
+  </ion-row>
+  <br>
+  <ion-list>
+    <ion-item *ngFor="let item of items">
+      <ion-avatar item-start>
+        <img src="{{ item.imageUrl }}">
+      </ion-avatar>
+      <h2>{{ item.name }}</h2>
+      <p item-right><ion-badge>{{ item.quantity }}</ion-badge></p>
+    </ion-item>
+  </ion-list>
+</ion-content>
