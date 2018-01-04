@@ -17,6 +17,7 @@ import { LoginPage } from '../pages/login/login';
 import { SettingsPage } from '../pages/settings/settings';
 import { SearchPage } from '../pages/search/search';
 import { ShoppingcartPage } from '../pages/shoppingcart/shoppingcart';
+import { SeatreservationPage } from '../pages/seatreservation/seatreservation';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { ShoppingcartPage } from '../pages/shoppingcart/shoppingcart';
     LoginPage,
     SettingsPage,
     SearchPage,
-    ShoppingcartPage
+    ShoppingcartPage,
+    SeatreservationPage
   ],
   imports: [
     BrowserModule, FormsModule,
@@ -40,7 +42,8 @@ import { ShoppingcartPage } from '../pages/shoppingcart/shoppingcart';
     LoginPage,
     SettingsPage,
     SearchPage,
-    ShoppingcartPage
+    ShoppingcartPage,
+    SeatreservationPage
   ],
   providers: [
     StatusBar,

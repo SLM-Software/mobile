@@ -12,6 +12,7 @@ import { LoginPage } from '../pages/login/login';
 import { SettingsPage } from '../pages/settings/settings';
 import { SearchPage } from '../pages/search/search';
 import { ShoppingcartPage } from '../pages/shoppingcart/shoppingcart';
+import { SeatreservationPage } from '../pages/seatreservation/seatreservation';
 
 // This import is part of "Set Up Auth0-Cordova"
 import Auth0Cordova from '@auth0/cordova';

@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>
+      Seat Reservation
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h3>Upcoming Reservation</h3>
+  <ion-list>
+    <ion-item>
+      <ion-label>
+        <ion-icon name="calendar-outline">&nbsp;2018-01-07</ion-icon><br>
+        <ion-icon name="time-outline">&nbsp;2 hrs</ion-icon></ion-label>
+      <button item-end><ion-icon name="arrow-dropright"></ion-icon></button>
+    </ion-item>
+    <ion-item>
+      <ion-label>
+        <ion-icon name="calendar-outline">&nbsp;2018-01-12</ion-icon><br>
+        <ion-icon name="time-outline">&nbsp;3 hrs</ion-icon></ion-label>
+      <button item-end><ion-icon name="arrow-dropright"></ion-icon></button>
+    </ion-item>
+    <ion-item>
+      <ion-label>
+        <ion-icon name="calendar-outline">&nbsp;2018-01-27</ion-icon><br>
+        <ion-icon name="time-outline">&nbsp;1 hr</ion-icon>
+      </ion-label>
+      <button item-end><ion-icon name="arrow-dropright"></ion-icon></button>
+    </ion-item>
+  </ion-list>
+  <h3>Create New Reservation</h3>
+    <ion-row>
+      <ion-col style="border-color: #D3D3D3; border-width: 1px; border-style: solid; border-top-left-radius: 15px; border-bottom-left-radius: 15px;">
+        <ion-datetime item-content [ngModel]="selectedDate.dateFormatted"
+            displayFormat="YYYY-MM-DD" pickerFormat="YYYY-MM-DD"
+            min="{{ selectedDate.minDate }}" max="{{ selectedDate.maxDate }}"></ion-datetime>
+      </ion-col>
+      <ion-col style="border-color: #D3D3D3; border-width: 1px; border-style: solid; border-top-right-radius: 15px; border-bottom-right-radius: 15px;">
+        <ion-datetime item-content [ngModel]="selectedDate.dateFormatted"
+              displayFormat="HH:00" pickerFormat="HH:00"
+              min="{{ selectedDate.minTime }}" max="{{ selectedDate.maxTime }}"></ion-datetime>
+      </ion-col>
+    </ion-row>
+    <br>
+    <ion-row>
+    <table>
+      <tr *ngFor="let row of seatData">
+        <td *ngFor="let col of row" style="width: 50px;">
+          <button ion-button style="width: 40px;" *ngIf="!col.isDisabled" [color]="col.isReserved?'danger':'primary'">{{ col.number }}</button>
+        </td>
+      </tr>
+    </table>  
+  </ion-row>
+</ion-content>
