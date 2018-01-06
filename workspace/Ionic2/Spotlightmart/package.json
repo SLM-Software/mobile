@@ -21,7 +21,8 @@
         "@angular/platform-browser": "^4.0.2",
         "@angular/platform-browser-dynamic": "^4.0.2",
         "@auth0/cordova": "^0.1.0",
-        "@ionic-native/core": "^3.4.2",
+        "@ionic-native/core": "^3.14.0",
+        "@ionic-native/google-maps": "^4.5.2",
         "@ionic-native/splash-screen": "^3.4.2",
         "@ionic-native/status-bar": "^3.4.2",
         "@ionic/storage": "^2.0.1",
@@ -32,6 +33,8 @@
         "cordova-plugin-console": "^1.1.0",
         "cordova-plugin-customurlscheme": "^4.3.0",
         "cordova-plugin-device": "^1.1.7",
+        "cordova-plugin-googlemaps": "^2.1.1",
+        "cordova-plugin-googlemaps-sdk": "git+https://github.com/mapsplugin/cordova-plugin-googlemaps-sdk.git",
         "cordova-plugin-ionic-webview": "^1.1.16",
         "cordova-plugin-safariviewcontroller": "^1.5.2",
         "cordova-plugin-splashscreen": "^4.1.0",
@@ -73,7 +76,13 @@
                 "ANDROID_HOST": "spotlightmartdev.auth0.com",
                 "ANDROID_PATHPREFIX": "/cordova/com.spotlight.retail/callback"
             },
-            "cordova-plugin-ionic-webview": {}
+            "cordova-plugin-ionic-webview": {},
+            "cordova-plugin-googlemaps": {
+                "API_KEY_FOR_ANDROID": "AIzaSyAnjRqrC1wQwmvVpxN7nNPzx1s8SWKrj68",
+                "API_KEY_FOR_IOS": "AIzaSyDHePQguj36U3jQJ4GIw0p_F2i1SD3wGfY",
+                "LOCATION_WHEN_IN_USE_DESCRIPTION": "Show your location on the map",
+                "LOCATION_ALWAYS_USAGE_DESCRIPTION": "Trace your location on the map"
+            }
         }
     }
 }

@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { ModalController, NavController } from 'ionic-angular';
 import { AuthService } from '../../services/auth.service';
 import { SeatreservationPage } from '../../pages/seatreservation/seatreservation';
+import { StorelocatorPage } from '../storelocator/storelocator';
 
 @Component({
   selector: 'page-home',
@@ -27,5 +28,9 @@ export class HomePage {
 
   goToReservation() {
     this.nav.push(SeatreservationPage);
+  }
+
+  goToStoreLocator() {
+    this.nav.push(StorelocatorPage);
   }
 }

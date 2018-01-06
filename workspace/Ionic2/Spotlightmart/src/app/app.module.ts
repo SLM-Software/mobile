@@ -5,6 +5,7 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 import { FormsModule } from '@angular/forms';
+import { GoogleMaps } from '@ionic-native/google-maps';
 
 // This import is part of "Creating an Authentication Service"
 import { AuthService } from '../services/auth.service';
@@ -18,6 +19,7 @@ import { SettingsPage } from '../pages/settings/settings';
 import { SearchPage } from '../pages/search/search';
 import { ShoppingcartPage } from '../pages/shoppingcart/shoppingcart';
 import { SeatreservationPage } from '../pages/seatreservation/seatreservation';
+import { StorelocatorPage } from '../pages/storelocator/storelocator';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,8 @@ import { SeatreservationPage } from '../pages/seatreservation/seatreservation';
     SettingsPage,
     SearchPage,
     ShoppingcartPage,
-    SeatreservationPage
+    SeatreservationPage,
+    StorelocatorPage
   ],
   imports: [
     BrowserModule, FormsModule,
@@ -43,14 +46,16 @@ import { SeatreservationPage } from '../pages/seatreservation/seatreservation';
     SettingsPage,
     SearchPage,
     ShoppingcartPage,
-    SeatreservationPage
+    SeatreservationPage,
+    StorelocatorPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     { provide: ErrorHandler, useClass: IonicErrorHandler },
     // This service is part of "Adding an Authentication Service"
-    AuthService
+    AuthService,
+    GoogleMaps
   ]
 })
 export class AppModule {}
