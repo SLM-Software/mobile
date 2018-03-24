@@ -21,10 +21,11 @@
         "@angular/platform-browser": "^4.0.2",
         "@angular/platform-browser-dynamic": "^4.0.2",
         "@auth0/cordova": "^0.1.0",
-        "@ionic-native/core": "^3.14.0",
-        "@ionic-native/google-maps": "^4.5.2",
-        "@ionic-native/splash-screen": "^3.4.2",
-        "@ionic-native/status-bar": "^3.4.2",
+        "@ionic-native/core": "^4.5.3",
+        "@ionic-native/geolocation": "^4.5.2",
+        "@ionic-native/google-maps": "^4.5.3",
+        "@ionic-native/splash-screen": "^4.5.3",
+        "@ionic-native/status-bar": "^4.5.3",
         "@ionic/storage": "^2.0.1",
         "angular2-jwt": "^0.2.3",
         "auth0-js": "^8.12.1",
@@ -33,6 +34,7 @@
         "cordova-plugin-console": "^1.1.0",
         "cordova-plugin-customurlscheme": "^4.3.0",
         "cordova-plugin-device": "^1.1.7",
+        "cordova-plugin-geolocation": "^4.0.1",
         "cordova-plugin-googlemaps": "^2.1.1",
         "cordova-plugin-googlemaps-sdk": "git+https://github.com/mapsplugin/cordova-plugin-googlemaps-sdk.git",
         "cordova-plugin-ionic-webview": "^1.1.16",
@@ -82,7 +84,8 @@
                 "API_KEY_FOR_IOS": "AIzaSyDHePQguj36U3jQJ4GIw0p_F2i1SD3wGfY",
                 "LOCATION_WHEN_IN_USE_DESCRIPTION": "Show your location on the map",
                 "LOCATION_ALWAYS_USAGE_DESCRIPTION": "Trace your location on the map"
-            }
+            },
+            "cordova-plugin-geolocation": {}
         }
     }
 }

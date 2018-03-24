@@ -23,7 +23,11 @@ export class LoginPage {
   ionViewDidLoad() {
     console.log("Entering ionViewDidLoad");
     if (this.oAuth.isAuthenticated())
-    console.log("User object : %o", this.oAuth.User);
+    {
+      console.log("User object : %o", this.oAuth.User);
+      console.log("ID token: %o", this.oAuth.idToken);
+      console.log("Access token : %o", this.oAuth.accessToken);
+    }
 }
 
   public btnLoginClicked() {

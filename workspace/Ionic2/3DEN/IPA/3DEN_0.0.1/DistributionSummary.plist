@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>3DEN.ipa</key>
+	<array>
+		<dict>
+			<key>architectures</key>
+			<array>
+				<string>armv7</string>
+				<string>arm64</string>
+			</array>
+			<key>certificate</key>
+			<dict>
+				<key>SHA1</key>
+				<string>4A6BDF53CC867EEBE14FB4C21126BD51D9930CDB</string>
+				<key>dateExpires</key>
+				<string>1/21/19</string>
+				<key>type</key>
+				<string>iOS Development</string>
+			</dict>
+			<key>entitlements</key>
+			<dict>
+				<key>application-identifier</key>
+				<string>PEWAZG9ZMA.com.3den.lounge</string>
+				<key>com.apple.developer.team-identifier</key>
+				<string>PEWAZG9ZMA</string>
+				<key>get-task-allow</key>
+				<true/>
+			</dict>
+			<key>name</key>
+			<string>3DEN.app</string>
+			<key>profile</key>
+			<dict>
+				<key>UUID</key>
+				<string>0d886388-be8b-4efe-a035-f490bf7f765d</string>
+				<key>name</key>
+				<string>iOS Team Provisioning Profile: *</string>
+			</dict>
+			<key>team</key>
+			<dict>
+				<key>id</key>
+				<string>PEWAZG9ZMA</string>
+				<key>name</key>
+				<string>BeamBox Ventures, LLC</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

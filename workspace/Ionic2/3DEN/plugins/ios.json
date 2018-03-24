@@ -1,0 +1,56 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "cordova-plugin-customurlscheme": {
+      "URL_SCHEME": "com.spotlight.retail",
+      "PACKAGE_NAME": "com.3den.lounge"
+    },
+    "cordova-plugin-device": {
+      "PACKAGE_NAME": "com.3den.lounge"
+    },
+    "cordova-plugin-geolocation": {
+      "PACKAGE_NAME": "com.3den.lounge"
+    },
+    "cordova-plugin-googlemaps": {
+      "API_KEY_FOR_IOS": "AIzaSyDHePQguj36U3jQJ4GIw0p_F2i1SD3wGfY",
+      "LOCATION_WHEN_IN_USE_DESCRIPTION": "Show your location on the map",
+      "LOCATION_ALWAYS_USAGE_DESCRIPTION": "Trace your location on the map",
+      "PACKAGE_NAME": "com.3den.lounge"
+    },
+    "cordova-plugin-ionic-webview": {
+      "PACKAGE_NAME": "com.3den.lounge"
+    },
+    "cordova-plugin-safariviewcontroller": {
+      "PACKAGE_NAME": "com.3den.lounge"
+    },
+    "cordova-plugin-splashscreen": {
+      "PACKAGE_NAME": "com.3den.lounge"
+    },
+    "cordova-plugin-statusbar": {
+      "PACKAGE_NAME": "com.3den.lounge"
+    },
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "com.3den.lounge"
+    },
+    "ionic-plugin-keyboard": {
+      "PACKAGE_NAME": "com.3den.lounge"
+    },
+    "cordova-plugin-advanced-http": {
+      "PACKAGE_NAME": "com.3den.lounge"
+    }
+  },
+  "dependent_plugins": {
+    "com.googlemaps.ios": {
+      "PACKAGE_NAME": "com.3den.lounge"
+    },
+    "cordova-plugin-file": {
+      "PACKAGE_NAME": "com.3den.lounge"
+    }
+  }
+}

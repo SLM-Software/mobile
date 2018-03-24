@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>
+      Home
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+  
+<ion-content padding>
+  <img style="display: block; margin: auto; height:300px; width:300px" src="image/400x400_SpotlightLogo.png"/>
+<!--          
+  <ion-row *ng-if="oAuth.isAuthenticated()">
+    <ion-col col-12>
+      <h3>{{ oAuth.user.name }}</h3>
+    </ion-col>
+  </ion-row>
+-->
+  <br>
+  <ion-segment>
+    <ion-segment-button value="desktop"><ion-icon color="default" name="desktop" (click)="goToReservation()"></ion-icon>4</ion-segment-button>
+    <ion-segment-button value="pin"><ion-icon color="danger" name="pin" (click)="goToStoreLocator()"></ion-icon>3</ion-segment-button>
+  </ion-segment>
+  <br>
+  <ion-row>
+    <ion-slides pager="true" parallax="true" *ngIf="slides.length">
+      <ion-slide *ngFor="let slide of slides">
+        <ion-card>
+          <ion-item>
+            <ion-row>
+              <ion-col col-4>
+                  <ion-img src="{{ slide.img_url }}"></ion-img>                  
+              </ion-col>
+              <ion-col col-8>
+                  <h2>{{ slide.quot }}</h2>
+                  <p>{{ slide.msg }}</p>
+              </ion-col>
+            </ion-row>
+          </ion-item>
+        </ion-card>
+      </ion-slide>
+    </ion-slides>
+  </ion-row>
+  <br>
+</ion-content>

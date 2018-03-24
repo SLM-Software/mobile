@@ -6,6 +6,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 import { FormsModule } from '@angular/forms';
 import { GoogleMaps } from '@ionic-native/google-maps';
+import { Geolocation } from '@ionic-native/geolocation';
 
 // This import is part of "Creating an Authentication Service"
 import { AuthService } from '../services/auth.service';
@@ -55,7 +56,8 @@ import { StorelocatorPage } from '../pages/storelocator/storelocator';
     { provide: ErrorHandler, useClass: IonicErrorHandler },
     // This service is part of "Adding an Authentication Service"
     AuthService,
-    GoogleMaps
+    GoogleMaps,
+    Geolocation
   ]
 })
 export class AppModule {}

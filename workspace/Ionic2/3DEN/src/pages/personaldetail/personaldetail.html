@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>
+      Registration
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h3>User details</h3>
+  <ion-item>
+    <ion-label>Name</ion-label>
+    <ion-input type="text" [(ngModel)]="name" name="Name"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Email</ion-label>
+    <ion-input type="text" [(ngModel)]="email" name="Email"></ion-input>
+  </ion-item>  
+  <ion-item>
+    <ion-label>Phone</ion-label>
+    <ion-input type="text" [(ngModel)]="phone" name="Phone"></ion-input>
+  </ion-item>  
+  <ion-footer no-shadow>
+    <ion-toolbar position="bottom">
+      <button ion-button full color="default" (click)="next()">Next</button>
+      <button ion-button full color="danger" (click)="clear()">Clear</button>
+    </ion-toolbar>
+  </ion-footer>
+</ion-content>
