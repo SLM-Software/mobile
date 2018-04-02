@@ -28,28 +28,30 @@ $colors: (
   secondary:  #32db64,
   danger:     #f53d3d,
   light:      #f4f4f4,
-  dark:       #222
+  dark:       #222,
+  3den:       #5A9F5A,
+  bgcolor:    #EBEDEA
 );
 
 
 // App iOS Variables
 // --------------------------------------------------
 // iOS only Sass variables can go here
-
+$background-ios-color: #EBEDEA;
 
 
 
 // App Material Design Variables
 // --------------------------------------------------
 // Material Design only Sass variables can go here
-
+$background-md-color: #EBEDEA;
 
 
 
 // App Windows Variables
 // --------------------------------------------------
 // Windows only Sass variables can go here
-
+$background-wp-color: #EBEDEA;
 
 
 

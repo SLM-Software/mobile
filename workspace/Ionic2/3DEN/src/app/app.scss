@@ -14,3 +14,23 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+
+.bg-style {
+    background : #EBEDEA;
+}
+
+h1 {
+    font-family : Helvetica;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 36;
+    color: #5A9F5A;
+}
+
+p {
+    font-family : Helvetica;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 14;
+    color: #A5AAA4;    
+}

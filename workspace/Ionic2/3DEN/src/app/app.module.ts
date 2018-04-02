@@ -23,6 +23,8 @@ import { ShoppingcartPage } from '../pages/shoppingcart/shoppingcart';
 import { SeatreservationPage } from '../pages/seatreservation/seatreservation';
 import { StorelocatorPage } from '../pages/storelocator/storelocator';
 import { PersonaldetailPage } from '../pages/personaldetail/personaldetail';
+import { PaymentmethodPage } from '../pages/paymentmethod/paymentmethod';
+import { PaymentconfirmPage } from '../pages/paymentconfirm/paymentconfirm';
 
 @NgModule({
   declarations: [
@@ -35,7 +37,9 @@ import { PersonaldetailPage } from '../pages/personaldetail/personaldetail';
     ShoppingcartPage,
     SeatreservationPage,
     StorelocatorPage,
-    PersonaldetailPage
+    PersonaldetailPage,
+    PaymentmethodPage,
+    PaymentconfirmPage
   ],
   imports: [
     BrowserModule, FormsModule,
@@ -52,7 +56,9 @@ import { PersonaldetailPage } from '../pages/personaldetail/personaldetail';
     ShoppingcartPage,
     SeatreservationPage,
     StorelocatorPage,
-    PersonaldetailPage
+    PersonaldetailPage,
+    PaymentmethodPage,
+    PaymentconfirmPage
   ],
   providers: [
     StatusBar,

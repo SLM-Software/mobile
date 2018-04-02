@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
-import { NavController, ViewController } from 'ionic-angular';
+import { NavController, ViewController, LoadingController } from 'ionic-angular';
 import { AuthService } from '../../services/auth.service';
 import { PersonaldetailPage } from '../../pages/personaldetail/personaldetail';
-//import { Http, Headers, RequestOptions } from '@angular/http';
 import { HTTP } from '@ionic-native/http';
+import Auth0 from 'auth0-js';
+import { PaymentmethodPage } from '../../pages/paymentmethod/paymentmethod';
 
 /**
  * Generated class for the LoginPage page.
@@ -17,10 +18,14 @@ import { HTTP } from '@ionic-native/http';
 })
 export class LoginPage {
 
-  oAuth;
-  
-  constructor(public viewCtrl : ViewController, public auth: AuthService, public  navCtrl: NavController, public http : HTTP) {
+  oAuth : any;
+  loadingCtrl : any;
+
+  constructor(public viewCtrl : ViewController, public auth: AuthService, public  navCtrl: NavController, public loadingController : LoadingController, public http : HTTP) {
     this.oAuth = auth;
+    this.loadingCtrl = this.loadingController.create({
+      content: "Loading..."
+    });
   }
 
   ionViewDidLoad() {
@@ -30,41 +35,43 @@ export class LoginPage {
       console.log("User object : %o", this.oAuth.User);
       console.log("ID token: %o", this.oAuth.idToken);
       console.log("Access token : %o", this.oAuth.accessToken);
+      this.navCtrl.push(PaymentmethodPage);
     }
   }
 
-  private getAccessToken() {
+  public btnLoginClicked() {
+    if (!this.oAuth.isAuthenticated()) 
+      this.oAuth.login();
+  }
+
+  public register() {
+  }
+  
+  public getInfo() {
+    this.loadingCtrl.present();    
+    console.log("Access Token : " + this.oAuth.accessToken);
     this.http.get(
       "https://demo.yackofamily.com/edeninfo/version",
       {},
       {
         'content-type' : 'application/json',
-        'Authorization' : this.oAuth.idToken,
+        'Authorization' : this.oAuth.accessToken,
         'Access-Control-Allow-Origin' : '*',
         'Access-Control-Allow-Methods' : 'POST, GET, OPTIONS, PUT'
       }
     ).then (function(response) {
-      console.log("Response : %o", JSON.parse(response.data));
+      console.log("Response : " + response.data);
+
+      let oResponse = JSON.parse(response.data);
+      alert(JSON.stringify(oResponse.retPack));
     }).catch (function(err) {
         console.log("Error : %o", err);
     });
-    
-    
-  }
-  public btnLoginClicked() {
-    if (!this.oAuth.isAuthenticated())
-      this.oAuth.login();
+    this.loadingCtrl.dismiss();
   }
 
-  public register() {
-    this.navCtrl.push(PersonaldetailPage);
-  }
-  
-  public getInfo() {
-    this.getAccessToken();
-  }
-  public dismiss() {
-    this.viewCtrl.dismiss();
+  public next() {
+    this.navCtrl.push(PaymentmethodPage);
   }
   
 }

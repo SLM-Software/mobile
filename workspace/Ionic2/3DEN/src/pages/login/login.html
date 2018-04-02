@@ -1,28 +1,27 @@
-<ion-header>
-  <ion-navbar color="danger">
+<ion-header no-border>
+  <ion-navbar color="bgcolor">
     <ion-title>
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <img *ngIf="!auth.isAuthenticated()" style="height:400px; width:400px" src="image/400x400_SpotlightLogo.png"/>
   <!-- just a login button if not authenticated -->
-  <div *ngIf="!auth.isAuthenticated()">
-    <button ion-button block color="primary" (click)="auth.login()">Login</button>
-    <button ion-button block color="default" (click)="register()">Register</button>
+  <div *ngIf="!auth.isAuthenticated()" class="container text-center">
+      <h1>Welcome to 3DEN, let's set you up.</h1>
+      <button ion-button block color="3den" (click)="auth.login()">Create an Account</button>
+    <br>
+    <div text-center>
+        <p>Already have an account?</p>
+    </div>
+    <button ion-button block clear color="primary" (click)="auth.login()">Log in</button>
   </div>
 
   <!-- a card with your picture and name, plus a logout button -->
   <div *ngIf="auth.isAuthenticated()">
-    <ion-card>
-      <img [src]="auth.user.picture" />
-      <ion-card-content>
-        <ion-card-title>{{ auth.user.name }}</ion-card-title>
-      </ion-card-content>
-    </ion-card>
+    <h1>Welcome, {{ auth.user.name }}</h1>
     <button ion-button block color="primary" (click)="auth.logout()">Logout</button>
-    <button ion-button block color="default" (click)="dismiss()">Close</button>
+    <button ion-button block color="default" (click)="next()">Next</button>
     <button ion-button block color="success" (click)="getInfo()">Version</button>
   </div>
 

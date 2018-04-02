@@ -1,0 +1,18 @@
+<ion-header no-border>
+  <ion-navbar color="bgcolor">
+    <ion-title>
+      Add Payment Method
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <h1>You will need a usable payment method to access a 3DEN lounge. Please choose a following payment method. You will be able to edit later in settings.</h1>
+  <br>
+  <button ion-button block color="dark" class="specific-button" (click)="btnApplePayClicked()"><ion-icon name="logo-apple"></ion-icon>&nbsp;&nbsp;&nbsp;Use Apply Pay</button>
+  <button ion-button block color="dark" class="specific-button" (click)="btnPayPalClicked()"><ion-icon name="card"></ion-icon>&nbsp;&nbsp;&nbsp;Use Paypal</button>
+  <button ion-button block color="dark" class="specific-button" (click)="btnGooglePayClicked()"><ion-icon name="logo-google"></ion-icon>&nbsp;&nbsp;&nbsp;Use Google Pay</button>
+  <button ion-button block color="3den" class="specific-button" (click)="btnAddCreditCardClicked()"><ion-icon name="add"></ion-icon>&nbsp;&nbsp;&nbsp;Add a Card</button>  
+  <button ion-button block color="primary" clear>Cancel</button>
+</ion-content>

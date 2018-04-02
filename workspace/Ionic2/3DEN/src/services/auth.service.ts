@@ -1,6 +1,6 @@
 import { Injectable, NgZone } from '@angular/core';
 import { Observable, Subscription } from 'rxjs';
-
+import { PaymentmethodPage } from '../pages/paymentmethod/paymentmethod';
 import Auth0Cordova from '@auth0/cordova';
 import Auth0 from 'auth0-js';
 
@@ -24,6 +24,7 @@ export class AuthService {
   accessToken: string;
   idToken: string;
   user: any;
+  navCtrl: any;
 
   constructor(public zone: NgZone) {
     this.user = this.getStorageVariable('profile');
@@ -63,7 +64,8 @@ export class AuthService {
     const client = new Auth0Cordova(auth0Config);
 
     const options = {
-      scope: 'openid profile offline_access'
+      scope: 'openid profile version',
+      audience: 'https://demo.yackofamily.com/edeninfo'
     };
 
     client.authorize(options, (err, authResult) => {
@@ -72,7 +74,7 @@ export class AuthService {
         console.log("Error : %o", err);
         throw err;
       }
-      console.log("Auth result : %o", authResult);
+      console.log("Auth result : " + JSON.stringify(authResult));
       this.setIdToken(authResult.idToken);
       this.setAccessToken(authResult.accessToken);
 
@@ -83,7 +85,7 @@ export class AuthService {
         if(err) {
           throw err;
         }
-        console.log("User profile : %o", profile);
+        console.log("User profile : " + JSON.stringify(profile));
         profile.user_metadata = profile.user_metadata || {};
         this.setStorageVariable('profile', profile);
         this.zone.run(() => {
@@ -95,10 +97,6 @@ export class AuthService {
 
   public logout() {
     let profile = window.localStorage.getItem('profile');
-    Object.keys(profile).forEach(function (key, index) 
-    {
-      console.log("Key : " + key + " Index : " + index);
-    });
     window.localStorage.removeItem('profile');
     window.localStorage.removeItem('access_token');
     window.localStorage.removeItem('id_token');
