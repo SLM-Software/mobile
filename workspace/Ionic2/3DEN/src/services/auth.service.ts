@@ -52,7 +52,6 @@ export class AuthService {
   public isAuthenticated() {
     if (localStorage.getItem('expires_at') == null)
     {
-      console.log("Token is empty, returning false");
       return false;
     }
     console.log("Token exipres at %o", localStorage.getItem('expires_at'));

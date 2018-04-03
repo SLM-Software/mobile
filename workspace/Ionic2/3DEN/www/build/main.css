@@ -30546,7 +30546,7 @@ p {
   color: #A5AAA4;
 }
 
-page-login h1 {
+page-login h1 .title {
   padding-top: 71px;
   padding-bottom: 261px;
 }

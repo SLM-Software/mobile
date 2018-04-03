@@ -21,7 +21,7 @@
     <key>CFBundlePackageType</key>
     <string>APPL</string>
     <key>CFBundleShortVersionString</key>
-    <string>0.0.2</string>
+    <string>0.0.3</string>
     <key>CFBundleSignature</key>
     <string>????</string>
     <key>CFBundleURLTypes</key>
@@ -44,7 +44,21 @@
       </dict>
     </array>
     <key>CFBundleVersion</key>
-    <string>0.0.2</string>
+    <string>0.0.3</string>
+    <key>Fabric</key>
+    <dict>
+      <key>APIKey</key>
+      <string>13ca6fcda4977c66a0d1ce2bd9bf4591f50420c5</string>
+      <key>Kits</key>
+      <array>
+        <dict>
+          <key>KitInfo</key>
+          <dict/>
+          <key>KitName</key>
+          <string>Crashlytics</string>
+        </dict>
+      </array>
+    </dict>
     <key>Google Maps API Key</key>
     <string>AIzaSyDHePQguj36U3jQJ4GIw0p_F2i1SD3wGfY</string>
     <key>LSApplicationQueriesSchemes</key>

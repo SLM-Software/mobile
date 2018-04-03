@@ -4,7 +4,7 @@ import { AuthService } from '../../services/auth.service';
 import { PersonaldetailPage } from '../../pages/personaldetail/personaldetail';
 import { HTTP } from '@ionic-native/http';
 import Auth0 from 'auth0-js';
-import { PaymentmethodPage } from '../../pages/paymentmethod/paymentmethod';
+import { PaymentconfirmPage } from '../../pages/paymentconfirm/paymentconfirm';
 
 /**
  * Generated class for the LoginPage page.
@@ -26,6 +26,7 @@ export class LoginPage {
     this.loadingCtrl = this.loadingController.create({
       content: "Loading..."
     });
+    this.oAuth.logout();
   }
 
   ionViewDidLoad() {
@@ -35,13 +36,13 @@ export class LoginPage {
       console.log("User object : %o", this.oAuth.User);
       console.log("ID token: %o", this.oAuth.idToken);
       console.log("Access token : %o", this.oAuth.accessToken);
-      this.navCtrl.push(PaymentmethodPage);
     }
   }
 
   public btnLoginClicked() {
-    if (!this.oAuth.isAuthenticated()) 
+    if (!this.oAuth.isAuthenticated()) {
       this.oAuth.login();
+    }
   }
 
   public register() {
@@ -71,7 +72,23 @@ export class LoginPage {
   }
 
   public next() {
-    this.navCtrl.push(PaymentmethodPage);
+    this.navCtrl.push(PaymentconfirmPage);
+  }
+
+  public btnApplePayClicked() {
+    this.navCtrl.push(PaymentconfirmPage);
+  }
+
+  public btnPayPalClicked() {
+    this.navCtrl.push(PaymentconfirmPage);    
+  }
+
+  public btnGooglePayClicked() {
+    this.navCtrl.push(PaymentconfirmPage);
+  }
+
+  public btnAddCreditCardClicked() {
+    
   }
   
 }
