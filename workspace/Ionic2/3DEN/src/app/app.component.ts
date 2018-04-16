@@ -15,7 +15,6 @@ import { ShoppingcartPage } from '../pages/shoppingcart/shoppingcart';
 import { SeatreservationPage } from '../pages/seatreservation/seatreservation';
 import { StorelocatorPage } from '../pages/storelocator/storelocator';
 import { PersonaldetailPage } from '../pages/personaldetail/personaldetail';
-import { PaymentmethodPage } from '../pages/paymentmethod/paymentmethod';
 import { PaymentconfirmPage } from '../pages/paymentconfirm/paymentconfirm';
 
 // This import is part of "Set Up Auth0-Cordova"

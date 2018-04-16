@@ -26,7 +26,6 @@ export class LoginPage {
     this.loadingCtrl = this.loadingController.create({
       content: "Loading..."
     });
-    this.oAuth.logout();
   }
 
   ionViewDidLoad() {

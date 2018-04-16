@@ -23,8 +23,8 @@ import { ShoppingcartPage } from '../pages/shoppingcart/shoppingcart';
 import { SeatreservationPage } from '../pages/seatreservation/seatreservation';
 import { StorelocatorPage } from '../pages/storelocator/storelocator';
 import { PersonaldetailPage } from '../pages/personaldetail/personaldetail';
-import { PaymentmethodPage } from '../pages/paymentmethod/paymentmethod';
 import { PaymentconfirmPage } from '../pages/paymentconfirm/paymentconfirm';
+import { ScanpassPage } from '../pages/scanpass/scanpass';
 
 @NgModule({
   declarations: [
@@ -38,8 +38,8 @@ import { PaymentconfirmPage } from '../pages/paymentconfirm/paymentconfirm';
     SeatreservationPage,
     StorelocatorPage,
     PersonaldetailPage,
-    PaymentmethodPage,
-    PaymentconfirmPage
+    PaymentconfirmPage,
+    ScanpassPage
   ],
   imports: [
     BrowserModule, FormsModule,
@@ -57,8 +57,8 @@ import { PaymentconfirmPage } from '../pages/paymentconfirm/paymentconfirm';
     SeatreservationPage,
     StorelocatorPage,
     PersonaldetailPage,
-    PaymentmethodPage,
-    PaymentconfirmPage
+    PaymentconfirmPage,
+    ScanpassPage
   ],
   providers: [
     StatusBar,

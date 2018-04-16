@@ -1,19 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild, ElementRef } from '@angular/core';
 import { NavController, Platform, NavParams } from 'ionic-angular';
-import { 
-  GoogleMaps, 
-  GoogleMap, 
-  GoogleMapsEvent, 
-  GoogleMapsAnimation,
-  MyLocation,
-  LatLng, 
-  CameraPosition, 
-  MarkerOptions, 
-  Marker, 
-  GoogleMapOptions, 
-  GoogleMapsMapTypeId 
-} from '@ionic-native/google-maps';
 import { Geolocation } from '@ionic-native/geolocation';
+import { ScanpassPage } from '../../pages/scanpass/scanpass';
+
+declare var google;
 
 @Component({
   selector: 'page-storelocator',
@@ -21,33 +11,47 @@ import { Geolocation } from '@ionic-native/geolocation';
 })
 export class StorelocatorPage {
 
-  map: GoogleMap;
-  storeMarkers; 
+  @ViewChild('map') mapElement: ElementRef;
+  map: any;
+  storeMarkers: any; 
+  currentMarker: any;
+  blnHideOverlay : boolean = true;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public platform: Platform, private googleMaps : GoogleMaps, public geolocation: Geolocation) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public platform: Platform, public geolocation: Geolocation) {
+
+    this.storeMarkers  =  [
+      {
+        name : "Hudson's Bay",
+        latitude : 42.252865,
+        longitude : -73.790962
+      }
+    ];
 
     this.platform.ready().then(() => {
-      this.loadMap();
     });
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad StorelocatorPage');
+    this.loadMap();
   }
 
-  loadMap() {
-    let storeMarkers : any =  [
-      {
-        name : "Dragon's Gate",
-        latitude : '37.7907',
-        longitude : '-122.4056'
-      }
-    ];
+  public hideOverlay() {
+    this.blnHideOverlay = true;
+  };
+
+  public btnLoungeClicked() {
+    this.navCtrl.push(ScanpassPage);
+  }
+
+  private loadMap() {
 
     this.geolocation.getCurrentPosition().then((position) => {
       console.log("Current position : %o", position);
-
-      this.map = new GoogleMap('map', {
+      // FOR TESTING ONLY
+      let LatLng = new google.maps.LatLng(42.252863, -73.790961);
+      //let LatLng = new google.maps.LatLng(position.coords.latitude,position.coords.longitude);
+      let mapOptions = {
         controls : {
           compass: true,
           myLocationButton: true,
@@ -59,61 +63,64 @@ export class StorelocatorPage {
           rotate: true,
           zoom: true
         },
-        camera : {
-          target: {
-            lat: position.coords.latitude,
-            lng: position.coords.longitude
-          },
-          zoom: 15,
-          tilt: 30
-        },
-        mapType: "MAP_TYPE_ROADMAP"
-      });
- 
-      //this.map.on(GoogleMapsEvent.MAP_READY).subscribe(this.addMarker);
-      this.map.on(GoogleMapsEvent.MAP_READY).subscribe(this.addMarker);
+        center: LatLng,
+        zoom: 15,
+        //tilt: 30,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+      };
+      this.map = new google.maps.Map(this.mapElement.nativeElement, mapOptions);
 
+      this.currentMarker = new google.maps.Marker({
+        map: this.map,
+        position: LatLng
+      });
+    }, (err) => {
+        console.log("Error : " + JSON.stringify(err));
     });
+    
+    //this.map.on(GoogleMapsEvent.MAP_READY).subscribe(this.addMarker);
+    //this.map.on(google.maps.GoogleMapsEvent.MAP_READY).subscribe(this.addMarker);
+    this.addMarker();
 
     this.geolocation.watchPosition().subscribe((position) => {
-      this.map.animateCamera({
-        target: {
-          lat: position.coords.latitude,
-          lng: position.coords.longitude
-        },
-        duration: 5000 // 5 secs
-      });
+      this.map.panTo(new google.maps.LatLng(position.coords.latitude, position.coords.longitude));
+    }, (err) => {
+      console.log("Error : " + JSON.stringify(err));
     });
   }
 
-  addMarker() {
-    let storeMarkers : any =  [
-      {
-        name : "Dragon's Gate",
-        latitude : '37.7907',
-        longitude : '-122.4056'
-      }
-    ];
+  private addMarker() {
 
-    console.log("Store markers : %o", storeMarkers);
-    for (var _i=0; _i < storeMarkers.length; _i++) {
-      console.log("Adding marker : %o", storeMarkers[_i]);
-      this.map.addMarker({
-        title: storeMarkers[_i].name,
-        icon: 'blue',
-        animation: 'DROP',
-        position: {
-          lat: Number(storeMarkers[_i].latitude),
-          lng: Number(storeMarkers[_i].longitude)
-        }
-      })
-      .then(marker=> {
-        marker.on(GoogleMapsEvent.MARKER_CLICK)
-          .subscribe(() => {
-            alert('clicked');
-          });
+    console.log("Store markers : " + JSON.stringify(this.storeMarkers));
+
+    for (var _i=0; _i < this.storeMarkers.length; _i++) {
+      console.log("Adding marker : " + JSON.stringify(this.storeMarkers[_i]));
+      let marker = new google.maps.Marker({
+      //this.map.addMarker({
+        map: this.map,
+        title: this.storeMarkers[_i].name,
+        animation: google.maps.Animation.DROP,
+        position: new google.maps.LatLng(this.storeMarkers[_i].latitude, this.storeMarkers[_i].longitude)
       });
+      let content = "<h4>Information!</h4>";
+      this.addInfoWindow(marker, content);
     }
+      //.then(marker=> {
+      //  marker.on(google.maps.GoogleMapsEvent.MARKER_CLICK)
+      //    .subscribe(() => {
+      //      alert('clicked');
+      //    });
+      //});
+  } 
 
+  private addInfoWindow(marker, content){
+ 
+    let infoWindow = new google.maps.InfoWindow({
+      content: content
+    });
+   
+    google.maps.event.addListener(marker, 'click', () => {
+      infoWindow.open(this.map, marker);
+    });
   }
 }

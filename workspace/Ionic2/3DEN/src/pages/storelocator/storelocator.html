@@ -1,12 +1,40 @@
-<ion-header>
-  <ion-navbar color="primary">
-    <ion-title>
-      Store Locator
-    </ion-title>
-  </ion-navbar>
-</ion-header>
 
-
-<ion-content padding>
-  <div id="map"></div>
+<div class="welcome-overlay" padding [hidden]="blnHideOverlay">
+  <div class="row">
+    <h1>Welcome, Daniel. </h1><h1>Your account has been set up successfully.</h1>
+    <button type="button" class="btn btn-default" (click)="hideOverlay()">Got It!</button>
+  </div>
+</div>
+<ion-content fullscreen>
+  <div class="wrapper">
+      <div #map id="map"></div>
+      <div class="heading">
+        <h1>3DEN</h1>
+      </div>    
+      <div class="footer">
+        <h4>3DENs Nearby</h4>
+        <div class="row">
+          <div class="col-md-3">
+            <button type="button" class="btn btn-default btn-circle" (click)="btnLoungeClicked()">
+              <img src="http://via.placeholder.com/60x60">
+            </button>
+          </div>
+          <div class="col-md-3">
+            <button type="button" class="btn btn-default btn-circle" (click)="btnLoungeClicked()">
+              <img src="http://via.placeholder.com/60x60">
+            </button>
+          </div>
+          <div class="col-md-3">
+            <button type="button" class="btn btn-default btn-circle" (click)="btnLoungeClicked()">
+              <img src="http://via.placeholder.com/60x60">
+            </button>
+          </div>
+          <div class="col-md-3 pull-right">
+            <button type="button" class="btn btn-primary btn-circle" style="position: absolute; right: 0px; background: primary;">
+              <h1>DC</h1>
+            </button>
+          </div>
+        </div>
+    </div>
+  </div>
 </ion-content>

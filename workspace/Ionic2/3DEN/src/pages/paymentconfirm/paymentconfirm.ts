@@ -24,10 +24,6 @@ export class PaymentconfirmPage {
   }
 
   public btnStartClicked() {
-    //for (let index:number=0; index < this.navCtrl.length(); index++)
-    //{
-    //  this.navCtrl.remove(index);
-    //}
-    this.navCtrl.push(StorelocatorPage);
+    this.navCtrl.setRoot(StorelocatorPage);
   }
 }

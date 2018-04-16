@@ -30551,17 +30551,65 @@ page-login h1 .title {
   padding-bottom: 261px;
 }
 
-page-paymentmethod .specific-button .button-inner {
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
+page-scanpass .btn-circle {
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  padding: 0;
+  font-size: 12px;
+  line-height: 1.428571429;
+  border-radius: 30px;
 }
 
 ion-app._gmaps_cdv_ .nav-decor {
   background-color: transparent !important;
 }
 
-page-storelocator #map {
+page-storelocator .wrapper {
+  position: relative;
+  width: 100%;
   height: 100%;
+}
+
+page-storelocator #map {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: transparent;
+}
+
+page-storelocator .heading {
+  position: absolute;
+  padding: 10px;
+  top: 5px;
+  left: 0px;
+  background: transparent;
+}
+
+page-storelocator .footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background: transparent;
+}
+
+page-storelocator .btn-circle {
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  padding: 0;
+  font-size: 12px;
+  line-height: 1.428571429;
+  border-radius: 30px;
+}
+
+page-storelocator .welcome-overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 20;
+  top: 0;
+  left: 0;
 }
